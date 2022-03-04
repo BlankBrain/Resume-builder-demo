@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8ED9C68256C446511CDE91BF /* Pods_Resume_builder_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C22411C8A4A91B1B4D9CC2E /* Pods_Resume_builder_demo.framework */; };
 		BA691EFF27D194FE00AC72CE /* PersonalInfoVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA691EFE27D194FE00AC72CE /* PersonalInfoVc.swift */; };
+		BA691F0127D19BBB00AC72CE /* CurrentResume.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA691F0027D19BBB00AC72CE /* CurrentResume.swift */; };
+		BA8ACF1927D1E47600891AE0 /* SkillVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ACF1827D1E47600891AE0 /* SkillVC.swift */; };
+		BA8ACF1C27D2514E00891AE0 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ACF1B27D2514E00891AE0 /* Utility.swift */; };
+		BA8ACF1E27D26C3100891AE0 /* WorkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ACF1D27D26C3100891AE0 /* WorkVC.swift */; };
+		BA8ACF2027D26DCB00891AE0 /* EducationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ACF1F27D26DCB00891AE0 /* EducationVC.swift */; };
+		BA8ACF2427D2831E00891AE0 /* ResumeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ACF2327D2831E00891AE0 /* ResumeTableViewCell.swift */; };
 		BAF7BD7A27D0FBA5002158F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF7BD7927D0FBA5002158F8 /* AppDelegate.swift */; };
 		BAF7BD7C27D0FBA5002158F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF7BD7B27D0FBA5002158F8 /* SceneDelegate.swift */; };
 		BAF7BD7E27D0FBA5002158F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF7BD7D27D0FBA5002158F8 /* ViewController.swift */; };
@@ -18,7 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B629338A955A88186E6A28B /* Pods-Resume builder demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resume builder demo.release.xcconfig"; path = "Target Support Files/Pods-Resume builder demo/Pods-Resume builder demo.release.xcconfig"; sourceTree = "<group>"; };
+		6C22411C8A4A91B1B4D9CC2E /* Pods_Resume_builder_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resume_builder_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA691EFE27D194FE00AC72CE /* PersonalInfoVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoVc.swift; sourceTree = "<group>"; };
+		BA691F0027D19BBB00AC72CE /* CurrentResume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentResume.swift; sourceTree = "<group>"; };
+		BA8ACF1827D1E47600891AE0 /* SkillVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillVC.swift; sourceTree = "<group>"; };
+		BA8ACF1B27D2514E00891AE0 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		BA8ACF1D27D26C3100891AE0 /* WorkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkVC.swift; sourceTree = "<group>"; };
+		BA8ACF1F27D26DCB00891AE0 /* EducationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationVC.swift; sourceTree = "<group>"; };
+		BA8ACF2327D2831E00891AE0 /* ResumeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeTableViewCell.swift; sourceTree = "<group>"; };
 		BAF7BD7627D0FBA5002158F8 /* Resume builder demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Resume builder demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF7BD7927D0FBA5002158F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAF7BD7B27D0FBA5002158F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +43,7 @@
 		BAF7BD8527D0FBA8002158F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAF7BD8827D0FBA8002158F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAF7BD8A27D0FBA8002158F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6FF9EE72B0BA7D2777A6D73 /* Pods-Resume builder demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resume builder demo.debug.xcconfig"; path = "Target Support Files/Pods-Resume builder demo/Pods-Resume builder demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,20 +51,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ED9C68256C446511CDE91BF /* Pods_Resume_builder_demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BA691EFA27D18B3500AC72CE /* main */ = {
+		3BB939D0498AE0526DFACC56 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				E6FF9EE72B0BA7D2777A6D73 /* Pods-Resume builder demo.debug.xcconfig */,
+				1B629338A955A88186E6A28B /* Pods-Resume builder demo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BA691EFA27D18B3500AC72CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA8ACF1F27D26DCB00891AE0 /* EducationVC.swift */,
+				BA8ACF1D27D26C3100891AE0 /* WorkVC.swift */,
+				BA8ACF1827D1E47600891AE0 /* SkillVC.swift */,
 				BA691EFE27D194FE00AC72CE /* PersonalInfoVc.swift */,
 				BAF7BD7D27D0FBA5002158F8 /* ViewController.swift */,
 				BA691EFB27D18B5A00AC72CE /* view */,
 			);
-			name = main;
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		BA691EFB27D18B5A00AC72CE /* view */ = {
@@ -59,11 +88,37 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		BA8ACF1A27D2513400891AE0 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				BA8ACF1B27D2514E00891AE0 /* Utility.swift */,
+			);
+			name = helper;
+			sourceTree = "<group>";
+		};
+		BA8ACF2127D282AA00891AE0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA691F0027D19BBB00AC72CE /* CurrentResume.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BA8ACF2227D282D100891AE0 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BA8ACF2327D2831E00891AE0 /* ResumeTableViewCell.swift */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
 		BAF7BD6D27D0FBA5002158F8 = {
 			isa = PBXGroup;
 			children = (
 				BAF7BD7827D0FBA5002158F8 /* Resume builder demo */,
 				BAF7BD7727D0FBA5002158F8 /* Products */,
+				3BB939D0498AE0526DFACC56 /* Pods */,
+				E7DB02FA4A8E293CF1BD23E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,15 +133,26 @@
 		BAF7BD7827D0FBA5002158F8 /* Resume builder demo */ = {
 			isa = PBXGroup;
 			children = (
+				BA8ACF2227D282D100891AE0 /* TableViewCell */,
+				BA8ACF2127D282AA00891AE0 /* Model */,
+				BA8ACF1A27D2513400891AE0 /* helper */,
 				BAF7BD7927D0FBA5002158F8 /* AppDelegate.swift */,
 				BAF7BD7B27D0FBA5002158F8 /* SceneDelegate.swift */,
-				BA691EFA27D18B3500AC72CE /* main */,
+				BA691EFA27D18B3500AC72CE /* Controller */,
 				BAF7BD8527D0FBA8002158F8 /* Assets.xcassets */,
 				BAF7BD8727D0FBA8002158F8 /* LaunchScreen.storyboard */,
 				BAF7BD8A27D0FBA8002158F8 /* Info.plist */,
 				BAF7BD8227D0FBA5002158F8 /* Resume_builder_demo.xcdatamodeld */,
 			);
 			path = "Resume builder demo";
+			sourceTree = "<group>";
+		};
+		E7DB02FA4A8E293CF1BD23E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C22411C8A4A91B1B4D9CC2E /* Pods_Resume_builder_demo.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,9 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAF7BD8D27D0FBA8002158F8 /* Build configuration list for PBXNativeTarget "Resume builder demo" */;
 			buildPhases = (
+				994F70612572C2162EDF8D07 /* [CP] Check Pods Manifest.lock */,
 				BAF7BD7227D0FBA5002158F8 /* Sources */,
 				BAF7BD7327D0FBA5002158F8 /* Frameworks */,
 				BAF7BD7427D0FBA5002158F8 /* Resources */,
+				06909775A5BE2FAC7101D376 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,16 +223,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06909775A5BE2FAC7101D376 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Resume builder demo/Pods-Resume builder demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Resume builder demo/Pods-Resume builder demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Resume builder demo/Pods-Resume builder demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		994F70612572C2162EDF8D07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Resume builder demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BAF7BD7227D0FBA5002158F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA691F0127D19BBB00AC72CE /* CurrentResume.swift in Sources */,
+				BA8ACF1927D1E47600891AE0 /* SkillVC.swift in Sources */,
+				BA8ACF1E27D26C3100891AE0 /* WorkVC.swift in Sources */,
 				BAF7BD7E27D0FBA5002158F8 /* ViewController.swift in Sources */,
 				BAF7BD7A27D0FBA5002158F8 /* AppDelegate.swift in Sources */,
+				BA8ACF2427D2831E00891AE0 /* ResumeTableViewCell.swift in Sources */,
+				BA8ACF1C27D2514E00891AE0 /* Utility.swift in Sources */,
 				BAF7BD8427D0FBA5002158F8 /* Resume_builder_demo.xcdatamodeld in Sources */,
 				BA691EFF27D194FE00AC72CE /* PersonalInfoVc.swift in Sources */,
 				BAF7BD7C27D0FBA5002158F8 /* SceneDelegate.swift in Sources */,
+				BA8ACF2027D26DCB00891AE0 /* EducationVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +424,7 @@
 		};
 		BAF7BD8E27D0FBA8002158F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6FF9EE72B0BA7D2777A6D73 /* Pods-Resume builder demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -336,6 +453,7 @@
 		};
 		BAF7BD8F27D0FBA8002158F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B629338A955A88186E6A28B /* Pods-Resume builder demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
