@@ -64,6 +64,7 @@ class EducationVC: UIViewController {
         print(CurrentResume.shared.Education)
         print(CurrentResume.shared.experience)
         print(CurrentResume.shared.skills)
+        performSegue(withIdentifier: "eduToProject", sender: self)
         
     }
     
