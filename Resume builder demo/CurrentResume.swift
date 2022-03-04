@@ -26,7 +26,7 @@ public class CurrentResume {
     var skills = [String]()
     var experience = [workExp]()
     var Education = [Edu]()
-
+    var projects = [project]()
     struct workExp{
         var companyName:String = ""
         var Duration:String = ""
@@ -36,6 +36,15 @@ public class CurrentResume {
         var className: String = ""
         var passingYear : String = ""
         var GPA:String = ""
+        
+    }
+    struct project {
+        var projectName: String = ""
+        var TeamSize : String = ""
+        var Summary:String = ""
+        var tech:String = ""
+        var role:String = ""
+
         
     }
     

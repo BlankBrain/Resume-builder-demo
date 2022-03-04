@@ -18,6 +18,8 @@
 		BA8ACF2627D2846A00891AE0 /* WorkSummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ACF2527D2846A00891AE0 /* WorkSummaryTableViewCell.swift */; };
 		BA8ACF2827D284C600891AE0 /* EducationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ACF2727D284C600891AE0 /* EducationTableViewCell.swift */; };
 		BA8ACF2A27D297C800891AE0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ACF2927D297C800891AE0 /* Models.swift */; };
+		BADD73A827D2A62500477348 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD73A727D2A62500477348 /* ProjectTableViewCell.swift */; };
+		BADD73AA27D2A64900477348 /* ProjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD73A927D2A64900477348 /* ProjectVC.swift */; };
 		BAF7BD7A27D0FBA5002158F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF7BD7927D0FBA5002158F8 /* AppDelegate.swift */; };
 		BAF7BD7C27D0FBA5002158F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF7BD7B27D0FBA5002158F8 /* SceneDelegate.swift */; };
 		BAF7BD7E27D0FBA5002158F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF7BD7D27D0FBA5002158F8 /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 		BA8ACF2527D2846A00891AE0 /* WorkSummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSummaryTableViewCell.swift; sourceTree = "<group>"; };
 		BA8ACF2727D284C600891AE0 /* EducationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationTableViewCell.swift; sourceTree = "<group>"; };
 		BA8ACF2927D297C800891AE0 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		BADD73A727D2A62500477348 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
+		BADD73A927D2A64900477348 /* ProjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectVC.swift; sourceTree = "<group>"; };
 		BAF7BD7627D0FBA5002158F8 /* Resume builder demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Resume builder demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF7BD7927D0FBA5002158F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAF7BD7B27D0FBA5002158F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +85,7 @@
 				BA8ACF1827D1E47600891AE0 /* SkillVC.swift */,
 				BA691EFE27D194FE00AC72CE /* PersonalInfoVc.swift */,
 				BAF7BD7D27D0FBA5002158F8 /* ViewController.swift */,
-				BA691EFB27D18B5A00AC72CE /* view */,
+				BADD73A927D2A64900477348 /* ProjectVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -114,6 +118,7 @@
 		BA8ACF2227D282D100891AE0 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				BADD73A727D2A62500477348 /* ProjectTableViewCell.swift */,
 				BA8ACF2327D2831E00891AE0 /* ResumeTableViewCell.swift */,
 				BA8ACF2527D2846A00891AE0 /* WorkSummaryTableViewCell.swift */,
 				BA8ACF2727D284C600891AE0 /* EducationTableViewCell.swift */,
@@ -147,6 +152,7 @@
 				BA8ACF1A27D2513400891AE0 /* helper */,
 				BAF7BD7927D0FBA5002158F8 /* AppDelegate.swift */,
 				BAF7BD7B27D0FBA5002158F8 /* SceneDelegate.swift */,
+				BA691EFB27D18B5A00AC72CE /* view */,
 				BA691EFA27D18B3500AC72CE /* Controller */,
 				BAF7BD8527D0FBA8002158F8 /* Assets.xcassets */,
 				BAF7BD8727D0FBA8002158F8 /* LaunchScreen.storyboard */,
@@ -289,6 +295,8 @@
 				BA8ACF2427D2831E00891AE0 /* ResumeTableViewCell.swift in Sources */,
 				BA8ACF1C27D2514E00891AE0 /* Utility.swift in Sources */,
 				BAF7BD8427D0FBA5002158F8 /* Resume_builder_demo.xcdatamodeld in Sources */,
+				BADD73AA27D2A64900477348 /* ProjectVC.swift in Sources */,
+				BADD73A827D2A62500477348 /* ProjectTableViewCell.swift in Sources */,
 				BA691EFF27D194FE00AC72CE /* PersonalInfoVc.swift in Sources */,
 				BAF7BD7C27D0FBA5002158F8 /* SceneDelegate.swift in Sources */,
 				BA8ACF2027D26DCB00891AE0 /* EducationVC.swift in Sources */,
