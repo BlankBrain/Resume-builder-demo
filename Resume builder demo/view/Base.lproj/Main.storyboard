@@ -447,7 +447,7 @@
                                 <rect key="frame" x="15" y="226" width="379" height="554"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="4Q9-ip-Uld">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="4Q9-ip-Uld" customClass="WorkSummaryTableViewCell" customModule="Resume_builder_demo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="379" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Q9-ip-Uld" id="o5B-I3-LEN">
@@ -477,6 +477,10 @@
                                                 <constraint firstItem="cWb-gG-Eqo" firstAttribute="top" secondItem="o5B-I3-LEN" secondAttribute="topMargin" constant="-6" id="cyI-iB-zKe"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="company" destination="6dm-tn-73K" id="Blo-KT-UBX"/>
+                                            <outlet property="duration" destination="w6x-58-axW" id="ZaV-ib-Hlv"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -489,7 +493,7 @@
                                     <imageReference key="image" image="plus.app.fill" catalog="system" symbolScale="large"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="addWork:" destination="XpS-LN-r2W" eventType="touchUpInside" id="Xgc-hs-1m5"/>
+                                    <action selector="addWork:" destination="Mta-q5-Jkq" eventType="touchUpInside" id="Oc6-JV-fk9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5r-jB-Isp">
@@ -523,6 +527,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="mFD-yB-tkE"/>
                     <connections>
+                        <outlet property="tableview" destination="hR0-5R-l9S" id="Qht-9n-dzL"/>
                         <segue destination="PMt-uv-FTs" kind="show" identifier="workToEdu" id="NfK-0b-O5b"/>
                     </connections>
                 </viewController>
@@ -548,38 +553,41 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GbH-g1-rmI">
-                                <rect key="frame" x="18" y="255" width="378" height="267"/>
+                                <rect key="frame" x="18" y="255" width="378" height="510"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell2" id="ilA-tw-t9x">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="ilA-tw-t9x" customClass="EducationTableViewCell" customModule="Resume_builder_demo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="378" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ilA-tw-t9x" id="OX1-zG-hB9">
                                             <rect key="frame" x="0.0" y="0.0" width="378" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bhS-Sr-oIO">
-                                                    <rect key="frame" x="0.0" y="5" width="311" height="20.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="bhS-Sr-oIO">
+                                                    <rect key="frame" x="0.0" y="5" width="314" height="50"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="class name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1G-7M-WLc">
-                                                            <rect key="frame" x="0.0" y="0.0" width="97" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="15" width="85.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passing Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vz6-Yz-eGe">
-                                                            <rect key="frame" x="107" y="0.0" width="97" height="20.5"/>
+                                                            <rect key="frame" x="135.5" y="15" width="97" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gpa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgM-4U-4yY">
-                                                            <rect key="frame" x="214" y="0.0" width="97" height="20.5"/>
+                                                            <rect key="frame" x="282.5" y="15" width="31.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="PIR-yb-7JD"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -587,6 +595,11 @@
                                                 <constraint firstItem="bhS-Sr-oIO" firstAttribute="leading" secondItem="OX1-zG-hB9" secondAttribute="leading" id="wWU-Zz-6Y1"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="Gpa" destination="HgM-4U-4yY" id="Qp5-MF-5Jg"/>
+                                            <outlet property="className" destination="p1G-7M-WLc" id="jDs-fw-I6b"/>
+                                            <outlet property="passingYear" destination="vz6-Yz-eGe" id="kXw-4G-fy8"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -603,11 +616,21 @@
                                     <action selector="addWork:" destination="XpS-LN-r2W" eventType="touchUpInside" id="clA-ce-rsB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rD3-21-qnp">
+                                <rect key="frame" x="173" y="810" width="96" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.095288696000000006" green="0.39496392320000001" blue="0.36294187030000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next">
+                                    <fontDescription key="titleFontDescription" type="italicSystem" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6IN-4e-DTg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6IN-4e-DTg" firstAttribute="bottom" secondItem="GbH-g1-rmI" secondAttribute="bottom" constant="340" id="66O-6b-nhb"/>
+                            <constraint firstItem="6IN-4e-DTg" firstAttribute="bottom" secondItem="GbH-g1-rmI" secondAttribute="bottom" constant="97" id="66O-6b-nhb"/>
                             <constraint firstItem="GbH-g1-rmI" firstAttribute="top" secondItem="FG6-l5-EWE" secondAttribute="bottom" constant="2" id="Jph-hT-yv4"/>
                             <constraint firstItem="GbH-g1-rmI" firstAttribute="leading" secondItem="6IN-4e-DTg" secondAttribute="leading" constant="18" id="UtG-US-mhE"/>
                             <constraint firstItem="FG6-l5-EWE" firstAttribute="leading" secondItem="6IN-4e-DTg" secondAttribute="leading" constant="101" id="Xex-Wk-lCO"/>
@@ -617,10 +640,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="adC-VY-gEh"/>
+                    <connections>
+                        <outlet property="tableview" destination="GbH-g1-rmI" id="Jv8-9r-6gi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIX-gk-O0M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4819" y="-386"/>
+            <point key="canvasLocation" x="4818.840579710145" y="-386.38392857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dqR-5i-fn4">

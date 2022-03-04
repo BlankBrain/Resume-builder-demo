@@ -31,7 +31,7 @@ public class CurrentResume {
         var companyName:String = ""
         var Duration:String = ""
     }
-    
+
     struct Edu {
         var className: String = ""
         var passingYear : String = ""
