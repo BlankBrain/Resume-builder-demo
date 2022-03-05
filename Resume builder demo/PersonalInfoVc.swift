@@ -15,6 +15,8 @@ class PersonalInfoVc: UIViewController {
     @IBOutlet weak var lastNAme: UILabel!
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var streetName: UITextField!
+    @IBOutlet weak var Mname: UITextField!
+    @IBOutlet weak var Lname: UITextField!
     
     @IBOutlet weak var middlename: UITextField!
     @IBOutlet weak var areaName: UITextField!
@@ -44,8 +46,8 @@ class PersonalInfoVc: UIViewController {
         
         
             CurrentResume.shared.firstName = firstName.text ?? ""
-            CurrentResume.shared.middleNAme = middleNAme.text ?? ""
-            CurrentResume.shared.lastName = lastNAme.text ?? ""
+            CurrentResume.shared.middleNAme = Mname.text ?? ""
+            CurrentResume.shared.lastName = Lname.text ?? ""
             let address1  = (( streetName.text ?? "") + " " +  (areaName.text ?? "" ) )
             let address2  =   ( " " + (zipCode.text ?? "" ) + (" " + Country.text! ))
             CurrentResume.shared.address = address1 + address2
