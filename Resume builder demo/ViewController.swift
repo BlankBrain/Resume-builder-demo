@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var addResume: UIButton!
@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     let cellIdentifiar : String = "cell"
     
     // MARK: TableView Vars
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +35,8 @@ class ViewController: UIViewController {
     
     
     
-
-
+    
+    
 }
 extension ViewController:  UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,8 +52,8 @@ extension ViewController:  UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         print(indexPath.row)
-
-       }
+        
+    }
     
     
 }

@@ -82,12 +82,12 @@ extension WorkVC:  UITableViewDelegate , UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .destructive, title: "delete"){ ( action, view, completionHandler ) in
-
+            
             self.workExp.remove(at: indexPath.row)
             DispatchQueue.main.async {
                 self.tableview.reloadData()
             }
-
+            
         }
         return UISwipeActionsConfiguration(actions: [action])
     }

@@ -9,12 +9,8 @@ import Foundation
 
 
 public class CurrentResume {
-    
     let isConsolePrint = true
-
-    
     static let shared = CurrentResume()
-    
     var firstName:String = ""
     var middleNAme:String = ""
     var lastName:String = ""
@@ -31,12 +27,11 @@ public class CurrentResume {
         var companyName:String = ""
         var Duration:String = ""
     }
-
+    
     struct Edu {
         var className: String = ""
         var passingYear : String = ""
         var GPA:String = ""
-        
     }
     struct project {
         var projectName: String = ""
@@ -44,8 +39,6 @@ public class CurrentResume {
         var Summary:String = ""
         var tech:String = ""
         var role:String = ""
-
-        
     }
     
     public func printE(_ items: Any..., separator: String = "", terminator: String = "") {

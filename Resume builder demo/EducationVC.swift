@@ -8,7 +8,7 @@
 import UIKit
 
 class EducationVC: UIViewController {
-
+    
     @IBOutlet weak var tableview: UITableView!
     
     var numberOfCellsTable:Int = 0
@@ -18,7 +18,7 @@ class EducationVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableview.delegate = self
         tableview.dataSource = self
         
@@ -42,13 +42,13 @@ class EducationVC: UIViewController {
             let textField1 = alert?.textFields![0]
             let textField2 = alert?.textFields![1]
             let textField3 = alert?.textFields![2]
-
+            
             
             var edu = CurrentResume.Edu()
             edu.className = textField1?.text ?? "Apple"
             edu.passingYear = textField2?.text ?? "2018"
             edu.GPA = textField3?.text ?? "4"
-
+            
             self.eduHistory.append(edu)
             CurrentResume.shared.Education = self.eduHistory
             
@@ -68,8 +68,8 @@ class EducationVC: UIViewController {
         
     }
     
-
-
+    
+    
 }
 extension EducationVC:  UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -87,16 +87,16 @@ extension EducationVC:  UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         print(indexPath.row)
-
-       }
+        
+    }
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .destructive, title: "delete"){ ( action, view, completionHandler ) in
-
+            
             self.eduHistory.remove(at: indexPath.row)
             DispatchQueue.main.async {
                 self.tableview.reloadData()
             }
-
+            
         }
         return UISwipeActionsConfiguration(actions: [action])
     }

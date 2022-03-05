@@ -8,7 +8,7 @@
 import UIKit
 
 class SkillVC: UIViewController {
-
+    
     @IBOutlet weak var tableForSkill: UITableView!
     
     var numberOfCellsTable:Int = 0
@@ -24,17 +24,17 @@ class SkillVC: UIViewController {
     }
     
     @IBAction func addSkill(_ sender: Any) {
-                let alert = UIAlertController(title: "Add Skill", message: "Input Your Skill", preferredStyle: .alert)
-
+        let alert = UIAlertController(title: "Add Skill", message: "Input Your Skill", preferredStyle: .alert)
+        
         alert.addTextField { (textField) in
             textField.placeholder = " SKILL"
         }
-
+        
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0]
             
             print("Text field: \(textField?.text)")
-           
+            
             self.skills.append( textField?.text ?? "default Skill" )
             DispatchQueue.main.async {
                 self.tableForSkill.reloadData()
@@ -45,12 +45,12 @@ class SkillVC: UIViewController {
     }
     
     @IBAction func nextBtnPressed(_ sender: Any) {
-         CurrentResume.shared.skills = skills 
+        CurrentResume.shared.skills = skills 
         
         performSegue(withIdentifier: "skilltoWork", sender: self)
     }
     
-
+    
 }
 extension SkillVC: UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,15 +65,15 @@ extension SkillVC: UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .destructive, title: "delete"){ ( action, view, completionHandler ) in
-
+            
             self.skills.remove(at: indexPath.row)
             DispatchQueue.main.async {
                 self.tableForSkill.reloadData()
             }
-
+            
         }
         return UISwipeActionsConfiguration(actions: [action])
     }
-
+    
     
 }

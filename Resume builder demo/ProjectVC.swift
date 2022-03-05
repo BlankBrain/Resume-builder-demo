@@ -8,7 +8,7 @@
 import UIKit
 
 class ProjectVC: UIViewController {
-
+    
     @IBOutlet weak var tableview: UITableView!
     var numberOfCellsTable:Int = 0
     let cellIdentifiar : String = "cell"
@@ -23,7 +23,7 @@ class ProjectVC: UIViewController {
         tableview.dataSource = self
     }
     
-
+    
     @IBAction func addProject(_ sender: Any) {
         
         let alert = UIAlertController(title: " Project Details", message: "Input Your Project Details", preferredStyle: .alert)
@@ -50,7 +50,7 @@ class ProjectVC: UIViewController {
             let textField3 = alert?.textFields![2]
             let textField4 = alert?.textFields![3]
             let textField5 = alert?.textFields![4]
-
+            
             
             var project1 = CurrentResume.project()
             project1.projectName = textField1?.text ?? ""
@@ -58,7 +58,7 @@ class ProjectVC: UIViewController {
             project1.Summary = textField3?.text ?? ""
             project1.tech = textField4?.text ?? ""
             project1.role = textField5?.text ?? ""
-
+            
             
             self.projects.append(project1)
             CurrentResume.shared.projects = self.projects
@@ -78,8 +78,8 @@ class ProjectVC: UIViewController {
     
     
     
-  
-
+    
+    
 }
 extension ProjectVC:  UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -101,6 +101,16 @@ extension ProjectVC:  UITableViewDelegate , UITableViewDataSource {
         print(indexPath.row)
         
     }
-    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive, title: "delete"){ ( action, view, completionHandler ) in
+            
+            self.projects.remove(at: indexPath.row)
+            DispatchQueue.main.async {
+                self.tableview.reloadData()
+            }
+            
+        }
+        return UISwipeActionsConfiguration(actions: [action])
+    }
     
 }
