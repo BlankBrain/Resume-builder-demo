@@ -22,7 +22,15 @@ class ProjectVC: UIViewController {
         tableview.delegate = self
         tableview.dataSource = self
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIinit()
+    }
+    func UIinit(){
+        self.view.backgroundColor = UIColor.systemMint
+        
+        
+    }
     
     @IBAction func addProject(_ sender: Any) {
         
@@ -71,6 +79,13 @@ class ProjectVC: UIViewController {
         
     }
     
+    @IBAction func nextClicked(_ sender: Any) {
+        
+        CurrentResume.shared.projects = self.projects
+
+        performSegue(withIdentifier: "projectToPhoto", sender: self)
+        
+    }
     
     
     

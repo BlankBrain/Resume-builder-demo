@@ -16,9 +16,11 @@ class PersonalInfoVc: UIViewController {
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var streetName: UITextField!
     
+    @IBOutlet weak var middlename: UITextField!
     @IBOutlet weak var areaName: UITextField!
     @IBOutlet weak var zipCode: UITextField!
     
+    @IBOutlet weak var expInYears: UITextField!
     @IBOutlet weak var Country: UITextField!
     
     override func viewDidLoad() {
@@ -28,22 +30,29 @@ class PersonalInfoVc: UIViewController {
         
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIinit()
+    }
+    func UIinit(){
+        self.view.backgroundColor = UIColor.systemMint
+        
+        
+    }
     
     @IBAction func nextBtnClicked(_ sender: Any) {
         
-        if((firstName.text != nil) && ( lastNAme.text != nil)  && ( streetName.text != nil)  && (areaName.text != nil) && (zipCode.text != nil) && (Country.text != nil)){
+        
             CurrentResume.shared.firstName = firstName.text ?? ""
             CurrentResume.shared.middleNAme = middleNAme.text ?? ""
             CurrentResume.shared.lastName = lastNAme.text ?? ""
             let address1  = (( streetName.text ?? "") + " " +  (areaName.text ?? "" ) )
             let address2  =   ( " " + (zipCode.text ?? "" ) + (" " + Country.text! ))
             CurrentResume.shared.address = address1 + address2
+            CurrentResume.shared.totalYear = expInYears.text ?? ""
             performSegue(withIdentifier: "personalInfoToProfessional", sender: self)
             
-        }else{
-            utility.showAlart(self, title: "Incomplete Data", message: "the firm is't fulfilled oroperly =")
-        }
+        
         
         
         

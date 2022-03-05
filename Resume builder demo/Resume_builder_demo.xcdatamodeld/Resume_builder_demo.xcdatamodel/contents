@@ -1,4 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Education" representedClassName="Education" syncable="YES">
+        <attribute name="eduClass" optional="YES" attributeType="String"/>
+        <attribute name="gpa" optional="YES" attributeType="String"/>
+        <attribute name="passingYear" optional="YES" attributeType="String"/>
+        <relationship name="eduExp" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Resume" inverseName="education" inverseEntity="Resume"/>
+    </entity>
+    <entity name="Project" representedClassName="Project" syncable="YES">
+        <attribute name="projectNAme" optional="YES" attributeType="String"/>
+        <attribute name="role" optional="YES" attributeType="String"/>
+        <attribute name="summary" optional="YES" attributeType="String"/>
+        <attribute name="teamSize" optional="YES" attributeType="String"/>
+        <attribute name="tech" optional="YES" attributeType="String"/>
+        <relationship name="projectexp" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Resume" inverseName="projectExp" inverseEntity="Resume"/>
+    </entity>
+    <entity name="Resume" representedClassName="Resume" syncable="YES">
+        <attribute name="carreerObjective" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="middleName" optional="YES" attributeType="String"/>
+        <attribute name="mobileNumber" optional="YES" attributeType="String"/>
+        <attribute name="skills" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="totalYearofExp" optional="YES" attributeType="String"/>
+        <relationship name="education" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Education" inverseName="eduExp" inverseEntity="Education"/>
+        <relationship name="projectExp" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Project" inverseName="projectexp" inverseEntity="Project"/>
+        <relationship name="workExp" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Work" inverseName="exp" inverseEntity="Work"/>
+    </entity>
+    <entity name="Work" representedClassName="Work" syncable="YES">
+        <attribute name="companyName" optional="YES" attributeType="String"/>
+        <attribute name="duration" optional="YES" attributeType="String"/>
+        <relationship name="exp" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Resume" inverseName="workExp" inverseEntity="Resume"/>
+    </entity>
+    <elements>
+        <element name="Resume" positionX="-367.87158203125" positionY="-201.916748046875" width="128" height="194"/>
+        <element name="Work" positionX="-129.516357421875" positionY="45.92507934570312" width="128" height="74"/>
+        <element name="Education" positionX="-88.308837890625" positionY="-83.97622680664062" width="128" height="89"/>
+        <element name="Project" positionX="-179.048095703125" positionY="168.9608459472656" width="128" height="119"/>
+    </elements>
 </model>

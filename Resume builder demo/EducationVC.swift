@@ -24,6 +24,18 @@ class EducationVC: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIinit()
+    }
+    func UIinit(){
+        self.view.backgroundColor = UIColor.systemMint
+        
+        
+    }
+    
+    
+    
     @IBAction func addEducation(_ sender: Any) {
         
         let alert = UIAlertController(title: "Education", message: "Input Your Education History", preferredStyle: .alert)
@@ -50,7 +62,6 @@ class EducationVC: UIViewController {
             edu.GPA = textField3?.text ?? "4"
             
             self.eduHistory.append(edu)
-            CurrentResume.shared.Education = self.eduHistory
             
             DispatchQueue.main.async {
                 self.tableview.reloadData()
@@ -64,6 +75,7 @@ class EducationVC: UIViewController {
         print(CurrentResume.shared.Education)
         print(CurrentResume.shared.experience)
         print(CurrentResume.shared.skills)
+        CurrentResume.shared.Education = self.eduHistory
         performSegue(withIdentifier: "eduToProject", sender: self)
         
     }

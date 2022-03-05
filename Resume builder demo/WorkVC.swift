@@ -22,6 +22,17 @@ class WorkVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIinit()
+    }
+    func UIinit(){
+        self.view.backgroundColor = UIColor.systemMint
+        
+        
+    }
+    
+    
     @IBAction func addWork(_ sender: Any) {
         
         let alert = UIAlertController(title: "Work Experience", message: "Input Your Work Experience", preferredStyle: .alert)
@@ -56,7 +67,8 @@ class WorkVC: UIViewController {
     
     
     @IBAction func nextBtnPressed(_ sender: Any) {
-        
+        CurrentResume.shared.experience = workExp
+
         
         performSegue(withIdentifier: "workToEdu", sender: self)
     }

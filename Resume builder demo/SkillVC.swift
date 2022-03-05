@@ -23,6 +23,18 @@ class SkillVC: UIViewController {
         tableForSkill.dataSource = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIinit()
+    }
+    func UIinit(){
+        self.view.backgroundColor = UIColor.systemMint
+        
+        
+    }
+    
+    
+    
     @IBAction func addSkill(_ sender: Any) {
         let alert = UIAlertController(title: "Add Skill", message: "Input Your Skill", preferredStyle: .alert)
         
@@ -45,7 +57,7 @@ class SkillVC: UIViewController {
     }
     
     @IBAction func nextBtnPressed(_ sender: Any) {
-        CurrentResume.shared.skills = skills 
+        CurrentResume.shared.skills = skills
         
         performSegue(withIdentifier: "skilltoWork", sender: self)
     }

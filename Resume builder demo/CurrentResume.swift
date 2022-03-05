@@ -6,11 +6,14 @@
 //
 
 import Foundation
+import UIKit
 
 
 public class CurrentResume {
     let isConsolePrint = true
     static let shared = CurrentResume()
+    
+    var image = UIImage() 
     var firstName:String = ""
     var middleNAme:String = ""
     var lastName:String = ""
@@ -18,7 +21,7 @@ public class CurrentResume {
     var email:String = ""
     var address:String = ""
     var objective:String = ""
-    var totalYear: Int = 0
+    var totalYear: String = ""
     var skills = [String]()
     var experience = [workExp]()
     var Education = [Edu]()
