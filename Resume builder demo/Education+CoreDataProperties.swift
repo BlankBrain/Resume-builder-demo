@@ -2,7 +2,7 @@
 //  Education+CoreDataProperties.swift
 //  
 //
-//  Created by Md. Mehedi Hasan on 5/3/22.
+//  Created by Md. Mehedi Hasan on 6/3/22.
 //
 //
 
@@ -17,8 +17,8 @@ extension Education {
     }
 
     @NSManaged public var eduClass: String?
-    @NSManaged public var passingYear: String?
     @NSManaged public var gpa: String?
+    @NSManaged public var passingYear: String?
     @NSManaged public var eduExp: Resume?
 
 }

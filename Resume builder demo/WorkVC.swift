@@ -27,7 +27,7 @@ class WorkVC: UIViewController {
         UIinit()
     }
     func UIinit(){
-        self.view.backgroundColor = UIColor.systemMint
+        self.view.backgroundColor = UIColor.white
         
         
     }

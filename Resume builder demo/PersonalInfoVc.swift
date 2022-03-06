@@ -24,7 +24,10 @@ class PersonalInfoVc: UIViewController {
     
     @IBOutlet weak var expInYears: UITextField!
     @IBOutlet weak var Country: UITextField!
+    @IBOutlet weak var careerobjective: UITextView!
+    @IBOutlet weak var txrtemail: UITextField!
     
+    @IBOutlet weak var txtPhone: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,8 +40,10 @@ class PersonalInfoVc: UIViewController {
         UIinit()
     }
     func UIinit(){
-        self.view.backgroundColor = UIColor.systemMint
-        
+        self.view.backgroundColor = UIColor.white
+        careerobjective.layer.borderWidth = 2
+        careerobjective.layer.borderColor = UIColor.gray.cgColor
+        careerobjective.layer.cornerRadius = 5.0
         
     }
     
@@ -52,6 +57,9 @@ class PersonalInfoVc: UIViewController {
             let address2  =   ( " " + (zipCode.text ?? "" ) + (" " + Country.text! ))
             CurrentResume.shared.address = address1 + address2
             CurrentResume.shared.totalYear = expInYears.text ?? ""
+        CurrentResume.shared.phone =  txtPhone.text ?? ""
+        CurrentResume.shared.email = txrtemail.text ?? ""
+        CurrentResume.shared.objective = careerobjective.text ?? ""
             performSegue(withIdentifier: "personalInfoToProfessional", sender: self)
             
         

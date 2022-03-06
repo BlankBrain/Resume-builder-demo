@@ -10,14 +10,6 @@
 		8ED9C68256C446511CDE91BF /* Pods_Resume_builder_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C22411C8A4A91B1B4D9CC2E /* Pods_Resume_builder_demo.framework */; };
 		BA691EFF27D194FE00AC72CE /* PersonalInfoVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA691EFE27D194FE00AC72CE /* PersonalInfoVc.swift */; };
 		BA691F0127D19BBB00AC72CE /* CurrentResume.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA691F0027D19BBB00AC72CE /* CurrentResume.swift */; };
-		BA7A115927D339900056F921 /* Education+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A115127D3398F0056F921 /* Education+CoreDataProperties copy.swift */; };
-		BA7A115A27D339900056F921 /* Work+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A115227D3398F0056F921 /* Work+CoreDataProperties copy.swift */; };
-		BA7A115B27D339900056F921 /* Project+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A115327D3398F0056F921 /* Project+CoreDataProperties copy.swift */; };
-		BA7A115C27D339900056F921 /* Education+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A115427D339900056F921 /* Education+CoreDataClass copy.swift */; };
-		BA7A115D27D339900056F921 /* Work+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A115527D339900056F921 /* Work+CoreDataClass copy.swift */; };
-		BA7A115E27D339900056F921 /* Resume+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A115627D339900056F921 /* Resume+CoreDataClass copy.swift */; };
-		BA7A115F27D339900056F921 /* Project+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A115727D339900056F921 /* Project+CoreDataClass copy.swift */; };
-		BA7A116027D339900056F921 /* Resume+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A115827D339900056F921 /* Resume+CoreDataProperties copy.swift */; };
 		BA7A116227D367CD0056F921 /* PhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A116127D367CD0056F921 /* PhotoVC.swift */; };
 		BA7A116427D369F60056F921 /* MyRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A116327D369F60056F921 /* MyRoundButton.swift */; };
 		BA7A116627D37D1F0056F921 /* ReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A116527D37D1F0056F921 /* ReviewVC.swift */; };
@@ -29,6 +21,14 @@
 		BA8ACF2627D2846A00891AE0 /* WorkSummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ACF2527D2846A00891AE0 /* WorkSummaryTableViewCell.swift */; };
 		BA8ACF2827D284C600891AE0 /* EducationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ACF2727D284C600891AE0 /* EducationTableViewCell.swift */; };
 		BA8ACF2A27D297C800891AE0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ACF2927D297C800891AE0 /* Models.swift */; };
+		BA9936AE27D48F5600B8DE50 /* Education+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9936A627D48F5500B8DE50 /* Education+CoreDataClass.swift */; };
+		BA9936AF27D48F5600B8DE50 /* Work+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9936A727D48F5500B8DE50 /* Work+CoreDataProperties.swift */; };
+		BA9936B027D48F5600B8DE50 /* Project+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9936A827D48F5500B8DE50 /* Project+CoreDataClass.swift */; };
+		BA9936B127D48F5600B8DE50 /* Education+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9936A927D48F5500B8DE50 /* Education+CoreDataProperties.swift */; };
+		BA9936B227D48F5600B8DE50 /* Resume+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9936AA27D48F5600B8DE50 /* Resume+CoreDataProperties.swift */; };
+		BA9936B327D48F5600B8DE50 /* Project+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9936AB27D48F5600B8DE50 /* Project+CoreDataProperties.swift */; };
+		BA9936B427D48F5600B8DE50 /* Work+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9936AC27D48F5600B8DE50 /* Work+CoreDataClass.swift */; };
+		BA9936B527D48F5600B8DE50 /* Resume+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9936AD27D48F5600B8DE50 /* Resume+CoreDataClass.swift */; };
 		BADD73A827D2A62500477348 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD73A727D2A62500477348 /* ProjectTableViewCell.swift */; };
 		BADD73AA27D2A64900477348 /* ProjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD73A927D2A64900477348 /* ProjectVC.swift */; };
 		BAF7BD7A27D0FBA5002158F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF7BD7927D0FBA5002158F8 /* AppDelegate.swift */; };
@@ -45,14 +45,6 @@
 		6C22411C8A4A91B1B4D9CC2E /* Pods_Resume_builder_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resume_builder_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA691EFE27D194FE00AC72CE /* PersonalInfoVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoVc.swift; sourceTree = "<group>"; };
 		BA691F0027D19BBB00AC72CE /* CurrentResume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentResume.swift; sourceTree = "<group>"; };
-		BA7A115127D3398F0056F921 /* Education+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Education+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
-		BA7A115227D3398F0056F921 /* Work+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Work+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
-		BA7A115327D3398F0056F921 /* Project+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
-		BA7A115427D339900056F921 /* Education+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Education+CoreDataClass copy.swift"; sourceTree = "<group>"; };
-		BA7A115527D339900056F921 /* Work+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Work+CoreDataClass copy.swift"; sourceTree = "<group>"; };
-		BA7A115627D339900056F921 /* Resume+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resume+CoreDataClass copy.swift"; sourceTree = "<group>"; };
-		BA7A115727D339900056F921 /* Project+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataClass copy.swift"; sourceTree = "<group>"; };
-		BA7A115827D339900056F921 /* Resume+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resume+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
 		BA7A116127D367CD0056F921 /* PhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoVC.swift; sourceTree = "<group>"; };
 		BA7A116327D369F60056F921 /* MyRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRoundButton.swift; sourceTree = "<group>"; };
 		BA7A116527D37D1F0056F921 /* ReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVC.swift; sourceTree = "<group>"; };
@@ -64,6 +56,14 @@
 		BA8ACF2527D2846A00891AE0 /* WorkSummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSummaryTableViewCell.swift; sourceTree = "<group>"; };
 		BA8ACF2727D284C600891AE0 /* EducationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationTableViewCell.swift; sourceTree = "<group>"; };
 		BA8ACF2927D297C800891AE0 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		BA9936A627D48F5500B8DE50 /* Education+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Education+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA9936A727D48F5500B8DE50 /* Work+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Work+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA9936A827D48F5500B8DE50 /* Project+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA9936A927D48F5500B8DE50 /* Education+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Education+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA9936AA27D48F5600B8DE50 /* Resume+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resume+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA9936AB27D48F5600B8DE50 /* Project+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA9936AC27D48F5600B8DE50 /* Work+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Work+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA9936AD27D48F5600B8DE50 /* Resume+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resume+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BADD73A727D2A62500477348 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
 		BADD73A927D2A64900477348 /* ProjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectVC.swift; sourceTree = "<group>"; };
 		BAF7BD7627D0FBA5002158F8 /* Resume builder demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Resume builder demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,14 +125,14 @@
 		BA7A114027D326B60056F921 /* CoreData Class */ = {
 			isa = PBXGroup;
 			children = (
-				BA7A115827D339900056F921 /* Resume+CoreDataProperties copy.swift */,
-				BA7A115727D339900056F921 /* Project+CoreDataClass copy.swift */,
-				BA7A115627D339900056F921 /* Resume+CoreDataClass copy.swift */,
-				BA7A115527D339900056F921 /* Work+CoreDataClass copy.swift */,
-				BA7A115427D339900056F921 /* Education+CoreDataClass copy.swift */,
-				BA7A115327D3398F0056F921 /* Project+CoreDataProperties copy.swift */,
-				BA7A115227D3398F0056F921 /* Work+CoreDataProperties copy.swift */,
-				BA7A115127D3398F0056F921 /* Education+CoreDataProperties copy.swift */,
+				BA9936A827D48F5500B8DE50 /* Project+CoreDataClass.swift */,
+				BA9936AB27D48F5600B8DE50 /* Project+CoreDataProperties.swift */,
+				BA9936AD27D48F5600B8DE50 /* Resume+CoreDataClass.swift */,
+				BA9936AA27D48F5600B8DE50 /* Resume+CoreDataProperties.swift */,
+				BA9936AC27D48F5600B8DE50 /* Work+CoreDataClass.swift */,
+				BA9936A727D48F5500B8DE50 /* Work+CoreDataProperties.swift */,
+				BA9936A627D48F5500B8DE50 /* Education+CoreDataClass.swift */,
+				BA9936A927D48F5500B8DE50 /* Education+CoreDataProperties.swift */,
 			);
 			name = "CoreData Class";
 			sourceTree = "<group>";
@@ -326,31 +326,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA9936B527D48F5600B8DE50 /* Resume+CoreDataClass.swift in Sources */,
 				BA691F0127D19BBB00AC72CE /* CurrentResume.swift in Sources */,
 				BA7A116627D37D1F0056F921 /* ReviewVC.swift in Sources */,
 				BA8ACF2627D2846A00891AE0 /* WorkSummaryTableViewCell.swift in Sources */,
 				BA8ACF1927D1E47600891AE0 /* SkillVC.swift in Sources */,
-				BA7A115F27D339900056F921 /* Project+CoreDataClass copy.swift in Sources */,
 				BA8ACF1E27D26C3100891AE0 /* WorkVC.swift in Sources */,
 				BA8ACF2827D284C600891AE0 /* EducationTableViewCell.swift in Sources */,
-				BA7A116027D339900056F921 /* Resume+CoreDataProperties copy.swift in Sources */,
+				BA9936B227D48F5600B8DE50 /* Resume+CoreDataProperties.swift in Sources */,
 				BAF7BD7E27D0FBA5002158F8 /* ViewController.swift in Sources */,
 				BAF7BD7A27D0FBA5002158F8 /* AppDelegate.swift in Sources */,
+				BA9936B127D48F5600B8DE50 /* Education+CoreDataProperties.swift in Sources */,
 				BA8ACF2427D2831E00891AE0 /* ResumeTableViewCell.swift in Sources */,
+				BA9936B027D48F5600B8DE50 /* Project+CoreDataClass.swift in Sources */,
 				BA8ACF1C27D2514E00891AE0 /* Utility.swift in Sources */,
 				BAF7BD8427D0FBA5002158F8 /* Resume_builder_demo.xcdatamodeld in Sources */,
 				BADD73AA27D2A64900477348 /* ProjectVC.swift in Sources */,
-				BA7A115927D339900056F921 /* Education+CoreDataProperties copy.swift in Sources */,
-				BA7A115C27D339900056F921 /* Education+CoreDataClass copy.swift in Sources */,
-				BA7A115B27D339900056F921 /* Project+CoreDataProperties copy.swift in Sources */,
+				BA9936AF27D48F5600B8DE50 /* Work+CoreDataProperties.swift in Sources */,
 				BA7A116427D369F60056F921 /* MyRoundButton.swift in Sources */,
 				BADD73A827D2A62500477348 /* ProjectTableViewCell.swift in Sources */,
-				BA7A115D27D339900056F921 /* Work+CoreDataClass copy.swift in Sources */,
 				BA691EFF27D194FE00AC72CE /* PersonalInfoVc.swift in Sources */,
-				BA7A115A27D339900056F921 /* Work+CoreDataProperties copy.swift in Sources */,
 				BAF7BD7C27D0FBA5002158F8 /* SceneDelegate.swift in Sources */,
+				BA9936AE27D48F5600B8DE50 /* Education+CoreDataClass.swift in Sources */,
 				BA8ACF2027D26DCB00891AE0 /* EducationVC.swift in Sources */,
-				BA7A115E27D339900056F921 /* Resume+CoreDataClass copy.swift in Sources */,
+				BA9936B427D48F5600B8DE50 /* Work+CoreDataClass.swift in Sources */,
+				BA9936B327D48F5600B8DE50 /* Project+CoreDataProperties.swift in Sources */,
 				BA7A116227D367CD0056F921 /* PhotoVC.swift in Sources */,
 				BA8ACF2A27D297C800891AE0 /* Models.swift in Sources */,
 			);

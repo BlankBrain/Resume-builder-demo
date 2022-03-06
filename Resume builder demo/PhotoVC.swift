@@ -27,7 +27,7 @@ class PhotoVC: UIViewController, PHPickerViewControllerDelegate {
         UIinit()
     }
     func UIinit(){
-        self.view.backgroundColor = UIColor.systemMint
+        self.view.backgroundColor = UIColor.white
         self.imageview.backgroundColor = .systemGray4
         
     }

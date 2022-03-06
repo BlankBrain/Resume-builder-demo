@@ -21,6 +21,7 @@
         <attribute name="lastName" optional="YES" attributeType="String"/>
         <attribute name="middleName" optional="YES" attributeType="String"/>
         <attribute name="mobileNumber" optional="YES" attributeType="String"/>
+        <attribute name="profileImage" optional="YES" attributeType="Binary"/>
         <attribute name="skills" optional="YES" attributeType="Transformable" customClassName="[String]"/>
         <attribute name="totalYearofExp" optional="YES" attributeType="String"/>
         <relationship name="education" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Education" inverseName="eduExp" inverseEntity="Education"/>
@@ -33,9 +34,9 @@
         <relationship name="exp" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Resume" inverseName="workExp" inverseEntity="Resume"/>
     </entity>
     <elements>
-        <element name="Resume" positionX="-367.87158203125" positionY="-201.916748046875" width="128" height="194"/>
-        <element name="Work" positionX="-129.516357421875" positionY="45.92507934570312" width="128" height="74"/>
         <element name="Education" positionX="-88.308837890625" positionY="-83.97622680664062" width="128" height="89"/>
         <element name="Project" positionX="-179.048095703125" positionY="168.9608459472656" width="128" height="119"/>
+        <element name="Resume" positionX="-398.7548828125" positionY="-265.4163513183594" width="128" height="223"/>
+        <element name="Work" positionX="-129.516357421875" positionY="45.92507934570312" width="128" height="74"/>
     </elements>
 </model>

@@ -2,7 +2,7 @@
 //  Project+CoreDataProperties.swift
 //  
 //
-//  Created by Md. Mehedi Hasan on 5/3/22.
+//  Created by Md. Mehedi Hasan on 6/3/22.
 //
 //
 
@@ -17,10 +17,10 @@ extension Project {
     }
 
     @NSManaged public var projectNAme: String?
-    @NSManaged public var teamSize: String?
-    @NSManaged public var summary: String?
-    @NSManaged public var tech: String?
     @NSManaged public var role: String?
+    @NSManaged public var summary: String?
+    @NSManaged public var teamSize: String?
+    @NSManaged public var tech: String?
     @NSManaged public var projectexp: Resume?
 
 }
