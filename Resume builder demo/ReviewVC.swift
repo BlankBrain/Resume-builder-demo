@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ReviewVC: UIViewController {
 
@@ -35,12 +36,7 @@ class ReviewVC: UIViewController {
         UIinit()
     }
     func UIinit(){
-        //self.view.backgroundColor = UIColor.systemMint
-        //self.imageview.backgroundColor = .systemGray4
-        
-        
         setupReview()
-
     }
     func setupReview(){
         picture.image = CurrentResume.shared.image
@@ -86,7 +82,7 @@ class ReviewVC: UIViewController {
         //project
         var projects = """
         Project Details:
-"""
+        """
         for item in CurrentResume.shared.projects {
             projects = projects + """
 
