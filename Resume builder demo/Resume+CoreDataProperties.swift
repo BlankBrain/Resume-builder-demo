@@ -22,9 +22,10 @@ extension Resume {
     @NSManaged public var lastName: String?
     @NSManaged public var middleName: String?
     @NSManaged public var mobileNumber: String?
+    @NSManaged public var profileImage: Data?
     @NSManaged public var skills: [String]?
     @NSManaged public var totalYearofExp: String?
-    @NSManaged public var profileImage: Data?
+    @NSManaged public var cvAddress: String?
     @NSManaged public var education: NSSet?
     @NSManaged public var projectExp: NSSet?
     @NSManaged public var workExp: NSSet?

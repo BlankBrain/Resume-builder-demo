@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		8ED9C68256C446511CDE91BF /* Pods_Resume_builder_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C22411C8A4A91B1B4D9CC2E /* Pods_Resume_builder_demo.framework */; };
+		BA0CA98F27D50C8A00BDB0DF /* Education+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0CA98727D50C8A00BDB0DF /* Education+CoreDataProperties.swift */; };
+		BA0CA99027D50C8A00BDB0DF /* Work+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0CA98827D50C8A00BDB0DF /* Work+CoreDataClass.swift */; };
+		BA0CA99127D50C8A00BDB0DF /* Resume+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0CA98927D50C8A00BDB0DF /* Resume+CoreDataProperties.swift */; };
+		BA0CA99227D50C8A00BDB0DF /* Project+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0CA98A27D50C8A00BDB0DF /* Project+CoreDataClass.swift */; };
+		BA0CA99327D50C8A00BDB0DF /* Project+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0CA98B27D50C8A00BDB0DF /* Project+CoreDataProperties.swift */; };
+		BA0CA99427D50C8A00BDB0DF /* Resume+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0CA98C27D50C8A00BDB0DF /* Resume+CoreDataClass.swift */; };
+		BA0CA99527D50C8A00BDB0DF /* Education+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0CA98D27D50C8A00BDB0DF /* Education+CoreDataClass.swift */; };
+		BA0CA99627D50C8A00BDB0DF /* Work+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0CA98E27D50C8A00BDB0DF /* Work+CoreDataProperties.swift */; };
 		BA691EFF27D194FE00AC72CE /* PersonalInfoVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA691EFE27D194FE00AC72CE /* PersonalInfoVc.swift */; };
 		BA691F0127D19BBB00AC72CE /* CurrentResume.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA691F0027D19BBB00AC72CE /* CurrentResume.swift */; };
 		BA7A116227D367CD0056F921 /* PhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A116127D367CD0056F921 /* PhotoVC.swift */; };
@@ -20,14 +28,6 @@
 		BA8ACF2627D2846A00891AE0 /* WorkSummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ACF2527D2846A00891AE0 /* WorkSummaryTableViewCell.swift */; };
 		BA8ACF2827D284C600891AE0 /* EducationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ACF2727D284C600891AE0 /* EducationTableViewCell.swift */; };
 		BA8ACF2A27D297C800891AE0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ACF2927D297C800891AE0 /* Models.swift */; };
-		BA9936AE27D48F5600B8DE50 /* Education+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9936A627D48F5500B8DE50 /* Education+CoreDataClass.swift */; };
-		BA9936AF27D48F5600B8DE50 /* Work+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9936A727D48F5500B8DE50 /* Work+CoreDataProperties.swift */; };
-		BA9936B027D48F5600B8DE50 /* Project+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9936A827D48F5500B8DE50 /* Project+CoreDataClass.swift */; };
-		BA9936B127D48F5600B8DE50 /* Education+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9936A927D48F5500B8DE50 /* Education+CoreDataProperties.swift */; };
-		BA9936B227D48F5600B8DE50 /* Resume+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9936AA27D48F5600B8DE50 /* Resume+CoreDataProperties.swift */; };
-		BA9936B327D48F5600B8DE50 /* Project+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9936AB27D48F5600B8DE50 /* Project+CoreDataProperties.swift */; };
-		BA9936B427D48F5600B8DE50 /* Work+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9936AC27D48F5600B8DE50 /* Work+CoreDataClass.swift */; };
-		BA9936B527D48F5600B8DE50 /* Resume+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9936AD27D48F5600B8DE50 /* Resume+CoreDataClass.swift */; };
 		BADD73A827D2A62500477348 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD73A727D2A62500477348 /* ProjectTableViewCell.swift */; };
 		BADD73AA27D2A64900477348 /* ProjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD73A927D2A64900477348 /* ProjectVC.swift */; };
 		BAF7BD7A27D0FBA5002158F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF7BD7927D0FBA5002158F8 /* AppDelegate.swift */; };
@@ -42,6 +42,14 @@
 /* Begin PBXFileReference section */
 		1B629338A955A88186E6A28B /* Pods-Resume builder demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resume builder demo.release.xcconfig"; path = "Target Support Files/Pods-Resume builder demo/Pods-Resume builder demo.release.xcconfig"; sourceTree = "<group>"; };
 		6C22411C8A4A91B1B4D9CC2E /* Pods_Resume_builder_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resume_builder_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA0CA98727D50C8A00BDB0DF /* Education+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Education+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA0CA98827D50C8A00BDB0DF /* Work+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Work+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA0CA98927D50C8A00BDB0DF /* Resume+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resume+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA0CA98A27D50C8A00BDB0DF /* Project+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA0CA98B27D50C8A00BDB0DF /* Project+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA0CA98C27D50C8A00BDB0DF /* Resume+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resume+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA0CA98D27D50C8A00BDB0DF /* Education+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Education+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA0CA98E27D50C8A00BDB0DF /* Work+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Work+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA691EFE27D194FE00AC72CE /* PersonalInfoVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoVc.swift; sourceTree = "<group>"; };
 		BA691F0027D19BBB00AC72CE /* CurrentResume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentResume.swift; sourceTree = "<group>"; };
 		BA7A116127D367CD0056F921 /* PhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoVC.swift; sourceTree = "<group>"; };
@@ -54,14 +62,6 @@
 		BA8ACF2527D2846A00891AE0 /* WorkSummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSummaryTableViewCell.swift; sourceTree = "<group>"; };
 		BA8ACF2727D284C600891AE0 /* EducationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationTableViewCell.swift; sourceTree = "<group>"; };
 		BA8ACF2927D297C800891AE0 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		BA9936A627D48F5500B8DE50 /* Education+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Education+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BA9936A727D48F5500B8DE50 /* Work+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Work+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BA9936A827D48F5500B8DE50 /* Project+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BA9936A927D48F5500B8DE50 /* Education+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Education+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BA9936AA27D48F5600B8DE50 /* Resume+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resume+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BA9936AB27D48F5600B8DE50 /* Project+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BA9936AC27D48F5600B8DE50 /* Work+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Work+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BA9936AD27D48F5600B8DE50 /* Resume+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resume+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BADD73A727D2A62500477348 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
 		BADD73A927D2A64900477348 /* ProjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectVC.swift; sourceTree = "<group>"; };
 		BAF7BD7627D0FBA5002158F8 /* Resume builder demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Resume builder demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,14 +123,14 @@
 		BA7A114027D326B60056F921 /* CoreData Class */ = {
 			isa = PBXGroup;
 			children = (
-				BA9936A827D48F5500B8DE50 /* Project+CoreDataClass.swift */,
-				BA9936AB27D48F5600B8DE50 /* Project+CoreDataProperties.swift */,
-				BA9936AD27D48F5600B8DE50 /* Resume+CoreDataClass.swift */,
-				BA9936AA27D48F5600B8DE50 /* Resume+CoreDataProperties.swift */,
-				BA9936AC27D48F5600B8DE50 /* Work+CoreDataClass.swift */,
-				BA9936A727D48F5500B8DE50 /* Work+CoreDataProperties.swift */,
-				BA9936A627D48F5500B8DE50 /* Education+CoreDataClass.swift */,
-				BA9936A927D48F5500B8DE50 /* Education+CoreDataProperties.swift */,
+				BA0CA98A27D50C8A00BDB0DF /* Project+CoreDataClass.swift */,
+				BA0CA98B27D50C8A00BDB0DF /* Project+CoreDataProperties.swift */,
+				BA0CA98C27D50C8A00BDB0DF /* Resume+CoreDataClass.swift */,
+				BA0CA98927D50C8A00BDB0DF /* Resume+CoreDataProperties.swift */,
+				BA0CA98D27D50C8A00BDB0DF /* Education+CoreDataClass.swift */,
+				BA0CA98727D50C8A00BDB0DF /* Education+CoreDataProperties.swift */,
+				BA0CA98827D50C8A00BDB0DF /* Work+CoreDataClass.swift */,
+				BA0CA98E27D50C8A00BDB0DF /* Work+CoreDataProperties.swift */,
 			);
 			name = "CoreData Class";
 			sourceTree = "<group>";
@@ -323,31 +323,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA9936B527D48F5600B8DE50 /* Resume+CoreDataClass.swift in Sources */,
+				BA0CA99627D50C8A00BDB0DF /* Work+CoreDataProperties.swift in Sources */,
 				BA691F0127D19BBB00AC72CE /* CurrentResume.swift in Sources */,
 				BA7A116627D37D1F0056F921 /* ReviewVC.swift in Sources */,
 				BA8ACF2627D2846A00891AE0 /* WorkSummaryTableViewCell.swift in Sources */,
 				BA8ACF1927D1E47600891AE0 /* SkillVC.swift in Sources */,
+				BA0CA98F27D50C8A00BDB0DF /* Education+CoreDataProperties.swift in Sources */,
 				BA8ACF1E27D26C3100891AE0 /* WorkVC.swift in Sources */,
 				BA8ACF2827D284C600891AE0 /* EducationTableViewCell.swift in Sources */,
-				BA9936B227D48F5600B8DE50 /* Resume+CoreDataProperties.swift in Sources */,
 				BAF7BD7E27D0FBA5002158F8 /* ViewController.swift in Sources */,
 				BAF7BD7A27D0FBA5002158F8 /* AppDelegate.swift in Sources */,
-				BA9936B127D48F5600B8DE50 /* Education+CoreDataProperties.swift in Sources */,
+				BA0CA99227D50C8A00BDB0DF /* Project+CoreDataClass.swift in Sources */,
 				BA8ACF2427D2831E00891AE0 /* ResumeTableViewCell.swift in Sources */,
-				BA9936B027D48F5600B8DE50 /* Project+CoreDataClass.swift in Sources */,
 				BA8ACF1C27D2514E00891AE0 /* Utility.swift in Sources */,
+				BA0CA99327D50C8A00BDB0DF /* Project+CoreDataProperties.swift in Sources */,
 				BAF7BD8427D0FBA5002158F8 /* Resume_builder_demo.xcdatamodeld in Sources */,
+				BA0CA99127D50C8A00BDB0DF /* Resume+CoreDataProperties.swift in Sources */,
 				BADD73AA27D2A64900477348 /* ProjectVC.swift in Sources */,
-				BA9936AF27D48F5600B8DE50 /* Work+CoreDataProperties.swift in Sources */,
 				BADD73A827D2A62500477348 /* ProjectTableViewCell.swift in Sources */,
 				BA691EFF27D194FE00AC72CE /* PersonalInfoVc.swift in Sources */,
+				BA0CA99427D50C8A00BDB0DF /* Resume+CoreDataClass.swift in Sources */,
 				BAF7BD7C27D0FBA5002158F8 /* SceneDelegate.swift in Sources */,
-				BA9936AE27D48F5600B8DE50 /* Education+CoreDataClass.swift in Sources */,
 				BA8ACF2027D26DCB00891AE0 /* EducationVC.swift in Sources */,
-				BA9936B427D48F5600B8DE50 /* Work+CoreDataClass.swift in Sources */,
-				BA9936B327D48F5600B8DE50 /* Project+CoreDataProperties.swift in Sources */,
+				BA0CA99527D50C8A00BDB0DF /* Education+CoreDataClass.swift in Sources */,
 				BA7A116227D367CD0056F921 /* PhotoVC.swift in Sources */,
+				BA0CA99027D50C8A00BDB0DF /* Work+CoreDataClass.swift in Sources */,
 				BA8ACF2A27D297C800891AE0 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     
   //MARK: coredata
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    //var ResumeList = [Resume.init()]
+    var allResume = [CurrentResume()]
+    
 
     // MARK: TableView Vars
     var numberOfCellsTable:Int = 0
@@ -27,10 +28,8 @@ class ViewController: UIViewController {
         tableview.delegate = self
         tableview.dataSource = self
        // let ResumeList = NSEntityDescription.entity(forEntityName: "Resume", in : context)!
-//        guard let path = Bundle.main.url(forResource: "test", withExtension: "pdf") else {
-//            return
-//        }
-        
+
+        fetchResume()
         
     }
     
@@ -51,39 +50,44 @@ class ViewController: UIViewController {
         
     }
     
-    func fetchResume(){
-        do{
-           // self.ResumeList =  try context.fetch(Resume.fetchRequest())
+ 
+    
+    func fetchResume() {
+        // Create Fetch Request
+        let fetchRequest: NSFetchRequest<Resume> = Resume.fetchRequest()
 
-            DispatchQueue.main.async {
-                self.tableview.reloadData()
+        // Perform Fetch Request
+        context.perform {
+            do {
+                // Execute Fetch Request
+                let result = try fetchRequest.execute()
+                print("\(result.count) ")
+
+                    
+                   
+
+            } catch {
+                print("Unable to Execute Fetch Request, \(error)")
             }
-
-        }catch{
-
         }
-
     }
-    
-    
     
     
     
 }
 extension ViewController:  UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return self.ResumeList.count
-        return 10
+        return self.allResume.count
+        //return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCell(withIdentifier: cellIdentifiar, for: indexPath) as? ResumeTableViewCell)!
-//        let cv = self.ResumeList[indexPath.row]
-//        let name1 =  cv.firstName
-//        let name2 =  cv.middleName
-//        let name3 =  cv.lastName
-//        let name = ( name1! + " " + name2! + " " + name3! )
-        cell.Name.text = "twst"//name
+        let cv = self.allResume[indexPath.row]
+//
+        cell.Name.text = cv.firstName
+        cell.MobileNumber.text = cv.phone
+        cell.Email.text = cv.email
         return cell
     }
     
@@ -95,5 +99,4 @@ extension ViewController:  UITableViewDelegate , UITableViewDataSource {
     
     
 }
-
 

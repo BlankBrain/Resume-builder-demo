@@ -821,6 +821,9 @@
                                                 <color key="value" red="0.73591752450000003" green="1" blue="0.57400220700000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="saveResume:" destination="dve-xd-d9u" eventType="touchUpInside" id="mTo-NO-USN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwE-fz-vjd" customClass="myRoundButton" customModule="Resume_builder_demo" customModuleProvider="target">
                                         <rect key="frame" x="188.5" y="0.0" width="175.5" height="30"/>
@@ -841,6 +844,9 @@
                                                 <color key="value" red="0.73591752450000003" green="1" blue="0.57400220700000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="exportPDF:" destination="dve-xd-d9u" eventType="touchUpInside" id="gOp-et-xqd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

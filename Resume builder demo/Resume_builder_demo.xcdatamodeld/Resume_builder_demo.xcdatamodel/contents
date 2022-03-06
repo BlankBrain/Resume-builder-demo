@@ -16,6 +16,7 @@
     </entity>
     <entity name="Resume" representedClassName="Resume" syncable="YES">
         <attribute name="carreerObjective" optional="YES" attributeType="String"/>
+        <attribute name="cvAddress" optional="YES" attributeType="String"/>
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="firstName" optional="YES" attributeType="String"/>
         <attribute name="lastName" optional="YES" attributeType="String"/>
@@ -36,7 +37,7 @@
     <elements>
         <element name="Education" positionX="-88.308837890625" positionY="-83.97622680664062" width="128" height="89"/>
         <element name="Project" positionX="-179.048095703125" positionY="168.9608459472656" width="128" height="119"/>
-        <element name="Resume" positionX="-398.7548828125" positionY="-265.4163513183594" width="128" height="223"/>
+        <element name="Resume" positionX="-398.7548828125" positionY="-265.4163513183594" width="128" height="238"/>
         <element name="Work" positionX="-129.516357421875" positionY="45.92507934570312" width="128" height="74"/>
     </elements>
 </model>

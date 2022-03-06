@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import SimplePDF
 
 class ReviewVC: UIViewController {
 
@@ -24,8 +25,21 @@ class ReviewVC: UIViewController {
     @IBOutlet weak var workExp: UITextView!
     @IBOutlet weak var ProjectSummary: UITextView!
     
-    
-    
+    //MARK: CoreDate
+    var allResume: [NSManagedObject] = []
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+    var projects = """
+    Project Details:
+    """
+    var work = """
+    Work Summary :
+    """
+    var edu = """
+    Education Details:
+    """
+    var skill = "Skills: "
+    let name = ( CurrentResume.shared.firstName + " " + CurrentResume.shared.middleNAme + " " + CurrentResume.shared.lastName)
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -37,10 +51,11 @@ class ReviewVC: UIViewController {
     }
     func UIinit(){
         setupReview()
+        
     }
     func setupReview(){
         picture.image = CurrentResume.shared.image
-        let name = ( CurrentResume.shared.firstName + " " + CurrentResume.shared.middleNAme + " " + CurrentResume.shared.lastName)
+       
         lblName.text = name
         lblemail.text =  ( "Email :" + CurrentResume.shared.email )
         MobileNumber.text =  ( "Phone :" + CurrentResume.shared.phone )
@@ -50,9 +65,7 @@ class ReviewVC: UIViewController {
         objective.text =  ( "Career Objective :" + CurrentResume.shared.objective )
         
         //work
-        var work = """
-        Work Summary :
-        """
+   
         for item in CurrentResume.shared.experience {
             work = work + """
 
@@ -62,15 +75,12 @@ class ReviewVC: UIViewController {
         }
         workExp.text = work
         //skills
-        var skill = "Skills: "
         for items in CurrentResume.shared.skills {
             skill = ( skill + ", "  + items )
         }
         skills.text = skill
         //edu
-        var edu = """
-        Education Details:
-        """
+
         for item in CurrentResume.shared.Education {
             edu = edu + """
 
@@ -80,9 +90,7 @@ class ReviewVC: UIViewController {
 """  }
         EduSummary.text = edu
         //project
-        var projects = """
-        Project Details:
-        """
+       
         for item in CurrentResume.shared.projects {
             projects = projects + """
 
@@ -96,4 +104,133 @@ class ReviewVC: UIViewController {
         ProjectSummary.text = projects
 
 }
+    
+    
+    @IBAction func saveResume(_ sender: Any) {
+        
+        
+        saveResume()
+        
+    }
+    
+    
+    @IBAction func exportPDF(_ sender: Any) {
+        createPDF()
+        
+    }
+
+    func createPDF(){
+        let a4PaperSize = CGSize(width: 595, height: 842)
+        let pdf = SimplePDF(pageSize: a4PaperSize)
+        pdf.setContentAlignment(.center)
+
+        // add logo image
+        let logoImage = CurrentResume.shared.image
+        pdf.addImage(logoImage)
+        pdf.addLineSpace(30)
+        pdf.setContentAlignment(.left)
+        pdf.addText("Name: \(name)")
+        
+        pdf.addLineSeparator()
+        pdf.addLineSpace(20.0)
+        pdf.setContentAlignment(.left)
+        pdf.addText("Address : \(CurrentResume.shared.address)")
+        
+        pdf.addLineSeparator()
+
+        pdf.setContentAlignment(.left)
+        pdf.addText("Mobile Number: \(CurrentResume.shared.phone)")
+ 
+        pdf.setContentAlignment(.right)
+        pdf.addText("Email : \(CurrentResume.shared.email)")
+        
+        pdf.addLineSeparator()
+        pdf.addLineSpace(20.0)
+        pdf.setContentAlignment(.left)
+        pdf.addText(" Total Year of Experience : \(CurrentResume.shared.totalYear)")
+        
+        pdf.addLineSeparator()
+        pdf.addLineSpace(20.0)
+        pdf.setContentAlignment(.left)
+        pdf.addText("Career Objective: \(CurrentResume.shared.objective)")
+        
+        pdf.beginNewPage()
+        pdf.addLineSpace(20.0)
+        pdf.addText("  \(skill)")
+        pdf.addLineSpace(30)
+        pdf.setContentAlignment(.left)
+        
+        pdf.addLineSpace(20.0)
+        pdf.addText("  \(work)")
+        pdf.addLineSpace(30)
+        pdf.setContentAlignment(.left)
+        
+        pdf.addLineSpace(20.0)
+        pdf.addText("  \(projects)")
+        pdf.addLineSpace(30)
+        pdf.setContentAlignment(.left)
+        
+        pdf.addLineSpace(20.0)
+        pdf.addText("  \(edu)")
+        pdf.addLineSpace(30)
+        pdf.setContentAlignment(.left)
+        
+        
+
+       
+
+       // pdf.beginNewPage()
+       // pdf.addText("Begin new page")
+        // Generate PDF data and save to a local file.
+        if let documentDirectories = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first {
+        
+            let pdfData = pdf.generatePDFdata()
+            do{
+               // try pdfData.write(to: path )// writeToFile(documentsFileName, options: .DataWritingAtomic)
+                guard let outputURL = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("Resume").appendingPathExtension("pdf")
+                        else { fatalError("Destination URL not created") }
+                    
+                    try pdfData.write(to: outputURL)
+                    print("open \(outputURL.path)")
+                
+                
+            }catch{
+                print(error)
+            }
+        }
+        
+    }
+    
+    func saveResume() {
+        
+        let newResume = Resume(context: context)
+        newResume.firstName = CurrentResume.shared.firstName
+        newResume.middleName = CurrentResume.shared.middleNAme
+        newResume.lastName = CurrentResume.shared.lastName
+        newResume.mobileNumber = CurrentResume.shared.phone
+        newResume.email = CurrentResume.shared.email
+        newResume.cvAddress = CurrentResume.shared.address
+        newResume.carreerObjective = CurrentResume.shared.objective
+        newResume.totalYearofExp = CurrentResume.shared.totalYear
+        newResume.skills = CurrentResume.shared.skills
+        newResume.workExp = NSSet(array: CurrentResume.shared.experience)
+        newResume.education = NSSet(array: CurrentResume.shared.Education)
+        newResume.projectExp = NSSet(array: CurrentResume.shared.projects)
+        let data = CurrentResume.shared.image.jpegData(compressionQuality: 0.9)
+        newResume.profileImage =  data
+        
+        
+        
+        //Save data
+        do{
+            try self.context.save()
+            print("Data Saved")
+        }catch{
+            print("Error while saving resume")
+        }
+        
+    }
+    
+    
+    
 }
