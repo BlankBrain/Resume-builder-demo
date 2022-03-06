@@ -44,6 +44,18 @@ class PersonalInfoVc: UIViewController {
         careerobjective.layer.borderWidth = 2
         careerobjective.layer.borderColor = UIColor.gray.cgColor
         careerobjective.layer.cornerRadius = 5.0
+        txtPhone.setUnderLine()
+        Country.setUnderLine()
+        expInYears.setUnderLine()
+        zipCode.setUnderLine()
+        areaName.setUnderLine()
+        Lname.setUnderLine()
+        Mname.setUnderLine()
+        firstName.setUnderLine()
+        middlename.setUnderLine()
+        txrtemail.setUnderLine()
+        streetName.setUnderLine()
+
         
     }
     

@@ -11,7 +11,6 @@
 		BA691EFF27D194FE00AC72CE /* PersonalInfoVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA691EFE27D194FE00AC72CE /* PersonalInfoVc.swift */; };
 		BA691F0127D19BBB00AC72CE /* CurrentResume.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA691F0027D19BBB00AC72CE /* CurrentResume.swift */; };
 		BA7A116227D367CD0056F921 /* PhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A116127D367CD0056F921 /* PhotoVC.swift */; };
-		BA7A116427D369F60056F921 /* MyRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A116327D369F60056F921 /* MyRoundButton.swift */; };
 		BA7A116627D37D1F0056F921 /* ReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A116527D37D1F0056F921 /* ReviewVC.swift */; };
 		BA8ACF1927D1E47600891AE0 /* SkillVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ACF1827D1E47600891AE0 /* SkillVC.swift */; };
 		BA8ACF1C27D2514E00891AE0 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ACF1B27D2514E00891AE0 /* Utility.swift */; };
@@ -46,7 +45,6 @@
 		BA691EFE27D194FE00AC72CE /* PersonalInfoVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoVc.swift; sourceTree = "<group>"; };
 		BA691F0027D19BBB00AC72CE /* CurrentResume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentResume.swift; sourceTree = "<group>"; };
 		BA7A116127D367CD0056F921 /* PhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoVC.swift; sourceTree = "<group>"; };
-		BA7A116327D369F60056F921 /* MyRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRoundButton.swift; sourceTree = "<group>"; };
 		BA7A116527D37D1F0056F921 /* ReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVC.swift; sourceTree = "<group>"; };
 		BA8ACF1827D1E47600891AE0 /* SkillVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillVC.swift; sourceTree = "<group>"; };
 		BA8ACF1B27D2514E00891AE0 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				BA8ACF1B27D2514E00891AE0 /* Utility.swift */,
-				BA7A116327D369F60056F921 /* MyRoundButton.swift */,
 			);
 			name = helper;
 			sourceTree = "<group>";
@@ -343,7 +340,6 @@
 				BAF7BD8427D0FBA5002158F8 /* Resume_builder_demo.xcdatamodeld in Sources */,
 				BADD73AA27D2A64900477348 /* ProjectVC.swift in Sources */,
 				BA9936AF27D48F5600B8DE50 /* Work+CoreDataProperties.swift in Sources */,
-				BA7A116427D369F60056F921 /* MyRoundButton.swift in Sources */,
 				BADD73A827D2A62500477348 /* ProjectTableViewCell.swift in Sources */,
 				BA691EFF27D194FE00AC72CE /* PersonalInfoVc.swift in Sources */,
 				BAF7BD7C27D0FBA5002158F8 /* SceneDelegate.swift in Sources */,
