@@ -13,6 +13,8 @@ public class CurrentResume {
     let isConsolePrint = true
     static let shared = CurrentResume()
     
+    var isEditMode:Bool = false
+    
     var image = UIImage() 
     var firstName:String = ""
     var middleNAme:String = ""
