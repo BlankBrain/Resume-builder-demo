@@ -11,19 +11,19 @@ I really admire the diversity and work ethic of anymind group.
 that's why I tried to complete as much as the main requirements. 
 but unfortunately due to time constraints I could not finish all the requirements but I believe I demonstrated enough to show some of my abilities. 
 I hope you will review the code with kind heart and give me a fair chance. 
-...
-What will work: 
+
+*** What will work: 
 * you can input all fields and save to coredata 
 * you can review your resume 
 * you can include picture in resume 
 * you can export your resume as PDF 
 * you can see saved resume from coredata ( prettily done due to time constrain) 
-///
-here is what I could not implement due to time constraints 
-. there is no validation on any of the fields 
-. Edit function for saved resume is not finished.
-. exported Resume PDF format is not pretty 
-. many more ui related compromises that i made to save time 
+
+*** here is what I could not implement due to time constraints 
+* there is no validation on any of the fields 
+* Edit function for saved resume is not finished.
+* exported Resume PDF format is not pretty 
+* many more ui related compromises that i made to save time 
 
 Best, 
 Mehedi
