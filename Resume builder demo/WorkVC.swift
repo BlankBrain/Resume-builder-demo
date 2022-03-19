@@ -34,7 +34,6 @@ class WorkVC: UIViewController {
     
     
     @IBAction func addWork(_ sender: Any) {
-        self.workExp.removeAll()
         
         let alert = UIAlertController(title: "Work Experience", message: "Input Your Work Experience", preferredStyle: .alert)
         
@@ -96,17 +95,19 @@ extension WorkVC:  UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .destructive, title: "delete"){ ( action, view, completionHandler ) in
             
-            CurrentResume.shared.experience.remove(at: indexPath.row)
             
-            self.workExp.remove(at: indexPath.row)
-            if CurrentResume.shared.experience.contains(where: {$0.companyName == self.workExp[indexPath.row].companyName}) {
-                CurrentResume.shared.experience.remove(at: indexPath.row)
-            } else {
-               //item could not be found
-            }
             DispatchQueue.main.async {
+                if  ( CurrentResume.shared.experience.contains(where: {$0.companyName == CurrentResume.shared.experience[indexPath.row].companyName})  )  {
+                    self.workExp.remove(at: indexPath.row)
+                    CurrentResume.shared.experience.remove(at: indexPath.row)
+                } else {
+                   //item could not be found
+                }
+                
+                
                 self.tableview.reloadData()
             }
+            
         }
         return UISwipeActionsConfiguration(actions: [action])
     }
