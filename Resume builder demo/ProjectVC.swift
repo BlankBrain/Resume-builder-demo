@@ -87,14 +87,6 @@ class ProjectVC: UIViewController {
         
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
 }
 extension ProjectVC:  UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -119,7 +111,16 @@ extension ProjectVC:  UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .destructive, title: "delete"){ ( action, view, completionHandler ) in
 
-           
+            DispatchQueue.main.async {
+                if  ( CurrentResume.shared.projects.contains(where: {$0.TeamSize == CurrentResume.shared.projects[indexPath.row].TeamSize})  )  {
+                    self.projects.remove(at: indexPath.row)
+                    CurrentResume.shared.projects.remove(at: indexPath.row)
+                } else {
+                   //item could not be found
+                }
+
+                self.tableview.reloadData()
+            }
 
         }
         return UISwipeActionsConfiguration(actions: [action])
