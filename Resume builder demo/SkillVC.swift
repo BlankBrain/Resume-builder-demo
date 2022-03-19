@@ -75,17 +75,23 @@ extension SkillVC: UITableViewDelegate , UITableViewDataSource {
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//        let action = UIContextualAction(style: .destructive, title: "delete"){ ( action, view, completionHandler ) in
-//            
-//            self.skills.remove(at: indexPath.row)
-//            DispatchQueue.main.async {
-//                self.tableForSkill.reloadData()
-//            }
-//            
-//        }
-//        return UISwipeActionsConfiguration(actions: [action])
-//    }
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive, title: "delete"){ ( action, view, completionHandler ) in
+            
+            self.skills.remove(at: indexPath.row)
+            if CurrentResume.shared.skills.contains(where: {$0 == self.skills[indexPath.row]}) {
+                CurrentResume.shared.skills.remove(at: indexPath.row)
+            } else {
+               //item could not be found
+            }
+            
+            DispatchQueue.main.async {
+                self.tableForSkill.reloadData()
+            }
+            
+        }
+        return UISwipeActionsConfiguration(actions: [action])
+    }
     
     
 }

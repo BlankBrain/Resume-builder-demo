@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     // MARK: TableView Vars
     var numberOfCellsTable:Int = 0
     let cellIdentifiar : String = "cell"
+    var index = 0 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +61,7 @@ class ViewController: UIViewController {
                     
                     self.allResume.append(items)
                 }
+                
                 
                 DispatchQueue.main.async {
                     self.tableview.reloadData()
