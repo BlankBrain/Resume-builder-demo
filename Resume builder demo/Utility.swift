@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 
 class utility {
@@ -16,6 +17,8 @@ class utility {
                              alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
                              inViewController.present(alert, animated: true)
     }
+   static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
 }
 extension UITextField {
 

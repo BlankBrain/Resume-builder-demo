@@ -27,7 +27,6 @@ class ReviewVC: UIViewController {
     
     //MARK: CoreDate
     var allResume: [NSManagedObject] = []
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     var projects = """
     Project Details:
@@ -192,6 +191,7 @@ class ReviewVC: UIViewController {
                     
                     try pdfData.write(to: outputURL)
                     print("open \(outputURL.path)")
+                utility.showAlart(self, title: "Success !", message: " Your Resume is can be found at \(outputURL.path)")
                 
                 
             }catch{
@@ -203,7 +203,7 @@ class ReviewVC: UIViewController {
     
     func saveResume() {
         
-        let newResume = Resume(context: context)
+        let newResume = Resume(context: utility.context)
         newResume.firstName = CurrentResume.shared.firstName
         newResume.middleName = CurrentResume.shared.middleNAme
         newResume.lastName = CurrentResume.shared.lastName
@@ -223,7 +223,7 @@ class ReviewVC: UIViewController {
         
         //Save data
         do{
-            try self.context.save()
+            try utility.context.save()
             print("Data Saved")
         }catch{
             print("Error while saving resume")

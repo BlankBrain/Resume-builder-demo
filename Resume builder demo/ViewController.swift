@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var addResume: UIButton!
     
     //MARK: coredata
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var allResume = [Resume]()
     
     
@@ -51,21 +50,17 @@ class ViewController: UIViewController {
     
     func fetchResume() {
         let fetchRequest: NSFetchRequest<Resume> = Resume.fetchRequest()
-        context.perform {
+        utility.context.perform {
             do {
                 let result = try fetchRequest.execute()
                 print("\(result.count) ")
-                //print("\(String(describing: result[2].firstName)) ")
-                if( result.count > 0){
-                    for items in result {
-                        self.allResume.append(items)
-                    }
-                    
-                    DispatchQueue.main.async {
-                        self.tableview.reloadData()
-                    }
+                for items in result {
+                    self.allResume.append(items)
                 }
                 
+                DispatchQueue.main.async {
+                    self.tableview.reloadData()
+                }
             } catch {
                 print("Unable to Execute Fetch Request, \(error)")
             }
@@ -116,17 +111,20 @@ extension ViewController:  UITableViewDelegate , UITableViewDataSource {
     }
     
     
-//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//        let action = UIContextualAction(style: .destructive, title: "delete"){ ( action, view, completionHandler ) in
-//            
-//            self.allResume.remove(at: indexPath.row)
-//            DispatchQueue.main.async {
-//                self.tableview.reloadData()
-//            }
-//            
-//        }
-//        return UISwipeActionsConfiguration(actions: [action])
-//    }
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive, title: "delete"){ ( action, view, completionHandler ) in
+            
+           let resumeToDelete =  self.allResume.remove(at: indexPath.row)
+            utility.context.delete(resumeToDelete)
+            do{
+                try utility.context.save()
+            }catch{
+                
+            }
+            self.fetchResume()
+        }
+        return UISwipeActionsConfiguration(actions: [action])
+    }
     
 }
 extension NSSet {
