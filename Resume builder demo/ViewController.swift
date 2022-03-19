@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         UIinit()
+        fetchResume()
     }
     func UIinit(){
         self.view.backgroundColor = UIColor.white
@@ -52,9 +53,11 @@ class ViewController: UIViewController {
         let fetchRequest: NSFetchRequest<Resume> = Resume.fetchRequest()
         utility.context.perform {
             do {
+                self.allResume.removeAll()
                 let result = try fetchRequest.execute()
                 print("\(result.count) ")
                 for items in result {
+                    
                     self.allResume.append(items)
                 }
                 
@@ -99,7 +102,7 @@ extension ViewController:  UITableViewDelegate , UITableViewDataSource {
         CurrentResume.shared.experience =  cv.workExp?.allObjects as? [CurrentResume.workExp] ?? []
         CurrentResume.shared.Education = cv.education?.allObjects as? [CurrentResume.Edu] ?? []
         CurrentResume.shared.projects = cv.projectExp?.allObjects as? [CurrentResume.project] ?? []
-        CurrentResume.shared.image = cv.profileImage as? UIImage ?? UIImage(systemName: "face.smiling") as! UIImage
+       // CurrentResume.shared.image = UIImage(data: cv.profileImage!) ?? UIImage(systemName: "face.smiling")!
         CurrentResume.shared.isEditMode = true
         print(CurrentResume.shared.skills)
         if( CurrentResume.shared.isEditMode == true){

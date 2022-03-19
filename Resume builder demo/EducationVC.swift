@@ -101,17 +101,17 @@ extension EducationVC:  UITableViewDelegate , UITableViewDataSource {
         print(indexPath.row)
         
     }
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let action = UIContextualAction(style: .destructive, title: "delete"){ ( action, view, completionHandler ) in
-            
-            self.eduHistory.remove(at: indexPath.row)
-            DispatchQueue.main.async {
-                self.tableview.reloadData()
-            }
-            
-        }
-        return UISwipeActionsConfiguration(actions: [action])
-    }
+//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//        let action = UIContextualAction(style: .destructive, title: "delete"){ ( action, view, completionHandler ) in
+//            
+//            self.eduHistory.remove(at: indexPath.row)
+//            DispatchQueue.main.async {
+//                self.tableview.reloadData()
+//            }
+//            
+//        }
+//        return UISwipeActionsConfiguration(actions: [action])
+//    }
     
     
 }

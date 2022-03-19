@@ -225,6 +225,10 @@ class ReviewVC: UIViewController {
         do{
             try utility.context.save()
             print("Data Saved")
+            utility.showAlart(self, title: "Success", message: "your Resume saved successfully !")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                self.navigationController?.popToRootViewController(animated: true)
+            }
         }catch{
             print("Error while saving resume")
         }
