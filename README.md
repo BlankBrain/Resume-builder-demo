@@ -2,6 +2,9 @@
 Take home project for anymind group
 .
 .
+step 1: install pods by opening up terminal and type " pod install "
+.
+.
 Before you start evaluating the code I just want to tell a story of my current situation. 
 .
 In 16th february 2022 I became a father of a beautiful baby girl. 
