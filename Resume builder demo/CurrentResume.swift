@@ -34,9 +34,10 @@ public class CurrentResume {
     }
     
     struct Edu {
-        var className: String = ""
+        var eduClass: String = ""
+        var gpa:String = ""
         var passingYear : String = ""
-        var GPA:String = ""
+        
     }
     struct project {
         var projectName: String = ""

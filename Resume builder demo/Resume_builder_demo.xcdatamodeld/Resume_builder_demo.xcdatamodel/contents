@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Education" representedClassName="Education" syncable="YES">
         <attribute name="eduClass" optional="YES" attributeType="String"/>
         <attribute name="gpa" optional="YES" attributeType="String"/>
@@ -35,7 +35,7 @@
         <relationship name="exp" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Resume" inverseName="workExp" inverseEntity="Resume"/>
     </entity>
     <elements>
-        <element name="Education" positionX="-88.308837890625" positionY="-83.97622680664062" width="128" height="89"/>
+        <element name="Education" positionX="-88.308837890625" positionY="-83.97622680664062" width="128" height="103"/>
         <element name="Project" positionX="-179.048095703125" positionY="168.9608459472656" width="128" height="119"/>
         <element name="Resume" positionX="-398.7548828125" positionY="-265.4163513183594" width="128" height="238"/>
         <element name="Work" positionX="-129.516357421875" positionY="45.92507934570312" width="128" height="74"/>

@@ -57,9 +57,9 @@ class EducationVC: UIViewController {
             
             
             var edu = CurrentResume.Edu()
-            edu.className = textField1?.text ?? "Apple"
+            edu.eduClass = textField1?.text ?? "Apple"
             edu.passingYear = textField2?.text ?? "2018"
-            edu.GPA = textField3?.text ?? "4"
+            edu.gpa = textField3?.text ?? "4"
             
             self.eduHistory.append(edu)
             
@@ -90,9 +90,9 @@ extension EducationVC:  UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCell(withIdentifier: cellIdentifiar, for: indexPath) as? EducationTableViewCell)!
-        cell.className.text = self.eduHistory[indexPath.row].className
+        cell.className.text = self.eduHistory[indexPath.row].eduClass
         cell.passingYear.text = self.eduHistory[indexPath.row].passingYear
-        cell.Gpa.text = self.eduHistory[indexPath.row].GPA
+        cell.Gpa.text = self.eduHistory[indexPath.row].gpa
         return cell
     }
     
@@ -105,7 +105,7 @@ extension EducationVC:  UITableViewDelegate , UITableViewDataSource {
         let action = UIContextualAction(style: .destructive, title: "delete"){ ( action, view, completionHandler ) in
             
             DispatchQueue.main.async {
-                if  ( CurrentResume.shared.Education.contains(where: {$0.GPA == CurrentResume.shared.Education[indexPath.row].GPA}) )  {
+                if  ( CurrentResume.shared.Education.contains(where: {$0.gpa == CurrentResume.shared.Education[indexPath.row].gpa}) )  {
                     self.eduHistory.remove(at: indexPath.row)
                     CurrentResume.shared.Education.remove(at: indexPath.row)
                 } else {

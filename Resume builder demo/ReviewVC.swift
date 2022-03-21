@@ -27,6 +27,7 @@ class ReviewVC: UIViewController {
     
     //MARK: CoreDate
     var allResume: [NSManagedObject] = []
+    var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     var projects = """
     Project Details:
@@ -83,9 +84,9 @@ class ReviewVC: UIViewController {
         for item in CurrentResume.shared.Education {
             edu = edu + """
 
-              Class name: \(item.className)
+              Class name: \(item.eduClass)
               Passing Year: \(item.passingYear)
-              Gpa: \(item.GPA)
+              Gpa: \(item.gpa)
 """  }
         EduSummary.text = edu
         //project
@@ -203,7 +204,8 @@ class ReviewVC: UIViewController {
     
     func saveResume() {
         
-        let newResume = Resume(context: utility.context)
+        let newResume = Resume(context: self.context)
+        print(CurrentResume.shared)
         newResume.firstName = CurrentResume.shared.firstName
         newResume.middleName = CurrentResume.shared.middleNAme
         newResume.lastName = CurrentResume.shared.lastName
@@ -213,9 +215,12 @@ class ReviewVC: UIViewController {
         newResume.carreerObjective = CurrentResume.shared.objective
         newResume.totalYearofExp = CurrentResume.shared.totalYear
         newResume.skills = CurrentResume.shared.skills
-        newResume.workExp = NSSet(array: CurrentResume.shared.experience)
-        newResume.education = NSSet(array: CurrentResume.shared.Education)
-        newResume.projectExp = NSSet(array: CurrentResume.shared.projects)
+        
+        //MARK:- Needs to work further
+//        newResume.addToEducation(NSSet(array: CurrentResume.shared.experience))
+//        newResume.addToEducation(NSSet(array: CurrentResume.shared.Education))
+//        newResume.addToProjectExp(NSSet(array: CurrentResume.shared.projects))
+        
         let data = CurrentResume.shared.image.jpegData(compressionQuality: 0.9)
         newResume.profileImage =  data
         

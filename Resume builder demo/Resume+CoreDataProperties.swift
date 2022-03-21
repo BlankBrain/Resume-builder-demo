@@ -2,7 +2,7 @@
 //  Resume+CoreDataProperties.swift
 //  
 //
-//  Created by Md. Mehedi Hasan on 6/3/22.
+//  Created by Md. Mehedi Hasan on 21/3/22.
 //
 //
 
@@ -17,6 +17,7 @@ extension Resume {
     }
 
     @NSManaged public var carreerObjective: String?
+    @NSManaged public var cvAddress: String?
     @NSManaged public var email: String?
     @NSManaged public var firstName: String?
     @NSManaged public var lastName: String?
@@ -25,7 +26,6 @@ extension Resume {
     @NSManaged public var profileImage: Data?
     @NSManaged public var skills: [String]?
     @NSManaged public var totalYearofExp: String?
-    @NSManaged public var cvAddress: String?
     @NSManaged public var education: NSSet?
     @NSManaged public var projectExp: NSSet?
     @NSManaged public var workExp: NSSet?
