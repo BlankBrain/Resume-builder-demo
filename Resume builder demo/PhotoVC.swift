@@ -35,6 +35,7 @@ class PhotoVC: UIViewController, PHPickerViewControllerDelegate {
     
     
     @IBAction func selectPhotoClicked(_ sender: Any) {
+        imageview.image = nil
         
         var config = PHPickerConfiguration(photoLibrary: .shared())
         config.selectionLimit = 1
@@ -68,7 +69,8 @@ class PhotoVC: UIViewController, PHPickerViewControllerDelegate {
                     }
                     DispatchQueue.main.async {
                         self.imageview.image = image
-                        CurrentResume.shared.image = image 
+                        CurrentResume.shared.image = image
+
                     }
                     
                 }
