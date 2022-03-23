@@ -124,10 +124,13 @@ class ReviewVC: UIViewController {
         let pdf = SimplePDF(pageSize: a4PaperSize)
         pdf.setContentAlignment(.center)
 
-        // add logo image
+        // check if there is image and add logo image
         let logoImage = CurrentResume.shared.image
-        pdf.addImage(logoImage)
-        pdf.addLineSpace(30)
+        if ( logoImage.size.width != 0) {
+            pdf.addImage(logoImage)
+            pdf.addLineSpace(30)
+        }
+        
         pdf.setContentAlignment(.left)
         pdf.addText("Name: \(name)")
         
