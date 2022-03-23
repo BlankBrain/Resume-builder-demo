@@ -44,10 +44,10 @@
 		8F71E986AF8FCAF17C983A5DF349221B /* SimplePDF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimplePDF.swift; path = SimplePDF/SimplePDF.swift; sourceTree = "<group>"; };
 		91FAE1BAC488618C5E47B7EED6BE3080 /* SimplePDF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimplePDF.release.xcconfig; sourceTree = "<group>"; };
 		9473B7DC78F3C8D3B58C2CE728FF1748 /* Pods-Resume builder demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Resume builder demo-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A69DAA1D92D720C0D8868940DF7CE00F /* Pods-Resume builder demo */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Resume builder demo"; path = Pods_Resume_builder_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CB98FA4E065BFBA1E0AA50553A4DF5 /* Pods-Resume builder demo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Resume builder demo.modulemap"; sourceTree = "<group>"; };
-		D91795F5DF155C9EBB3E94A34957B330 /* SimplePDF */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SimplePDF; path = SimplePDF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D91795F5DF155C9EBB3E94A34957B330 /* SimplePDF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimplePDF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9FBB433CF416F878221309C6BA5024 /* SimplePDF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimplePDF.debug.xcconfig; sourceTree = "<group>"; };
 		F541597B732868C95359520E59818235 /* SimplePDF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SimplePDF.h; path = SimplePDF/SimplePDF.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,7 +79,6 @@
 				8F71E986AF8FCAF17C983A5DF349221B /* SimplePDF.swift */,
 				2C0E38C1CFC2BACDD568B0450E67D155 /* Support Files */,
 			);
-			name = SimplePDF;
 			path = SimplePDF;
 			sourceTree = "<group>";
 		};
@@ -135,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				A69DAA1D92D720C0D8868940DF7CE00F /* Pods-Resume builder demo */,
-				D91795F5DF155C9EBB3E94A34957B330 /* SimplePDF */,
+				D91795F5DF155C9EBB3E94A34957B330 /* SimplePDF.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -205,7 +204,7 @@
 			);
 			name = SimplePDF;
 			productName = SimplePDF;
-			productReference = D91795F5DF155C9EBB3E94A34957B330 /* SimplePDF */;
+			productReference = D91795F5DF155C9EBB3E94A34957B330 /* SimplePDF.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A957FF37001E93FAF1D6EAFEF038D24E /* Pods-Resume builder demo */ = {
@@ -234,7 +233,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1320;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -520,7 +519,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SimplePDF/SimplePDF-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SimplePDF/SimplePDF-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -554,7 +553,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SimplePDF/SimplePDF-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SimplePDF/SimplePDF-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
