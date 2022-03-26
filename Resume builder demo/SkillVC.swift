@@ -46,8 +46,14 @@ class SkillVC: UIViewController {
             let textField = alert?.textFields![0]
             
             print("Text field: \(textField?.text)")
+            let skill = textField?.text ?? ""
+            if(skill.isBlank){
+                utility.showAlart(self, title: "Error !", message: "Please enter your Skill")
+            }else{
+                self.skills.append( skill ) }
             
-            self.skills.append( textField?.text ?? "default Skill" )
+            
+            
             DispatchQueue.main.async {
                 self.tableForSkill.reloadData()
             }
