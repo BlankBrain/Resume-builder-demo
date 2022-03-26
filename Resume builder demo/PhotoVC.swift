@@ -29,11 +29,13 @@ class PhotoVC: UIViewController, PHPickerViewControllerDelegate {
     func UIinit(){
         self.view.backgroundColor = UIColor.white
         self.imageview.backgroundColor = .systemGray4
+        self.imageview.image = CurrentResume.shared.image
         
     }
     
     
     @IBAction func selectPhotoClicked(_ sender: Any) {
+        imageview.image = nil
         
         var config = PHPickerConfiguration(photoLibrary: .shared())
         config.selectionLimit = 1
@@ -67,7 +69,8 @@ class PhotoVC: UIViewController, PHPickerViewControllerDelegate {
                     }
                     DispatchQueue.main.async {
                         self.imageview.image = image
-                        CurrentResume.shared.image = image 
+                        CurrentResume.shared.image = image
+
                     }
                     
                 }

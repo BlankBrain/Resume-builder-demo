@@ -14,7 +14,7 @@ public class CurrentResume {
     static let shared = CurrentResume()
     
     var isEditMode:Bool = false
-    
+    var Index = 0 
     var image = UIImage() 
     var firstName:String = ""
     var middleNAme:String = ""

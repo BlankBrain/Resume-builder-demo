@@ -104,8 +104,9 @@ extension ViewController:  UITableViewDelegate , UITableViewDataSource {
         CurrentResume.shared.experience =  cv.workExp?.allObjects as? [CurrentResume.workExp] ?? []
         CurrentResume.shared.Education = cv.education?.allObjects as? [CurrentResume.Edu] ?? []
         CurrentResume.shared.projects = cv.projectExp?.allObjects as? [CurrentResume.project] ?? []
-       // CurrentResume.shared.image = UIImage(data: cv.profileImage!) ?? UIImage(systemName: "face.smiling")!
+        CurrentResume.shared.image =  UIImage(data: cv.profileImage!) ?? UIImage(systemName: "face.smiling")!
         CurrentResume.shared.isEditMode = true
+        CurrentResume.shared.Index = indexPath.row
         print(CurrentResume.shared.skills)
         if( CurrentResume.shared.isEditMode == true){
             performSegue(withIdentifier: "homeToPersonal", sender: self)

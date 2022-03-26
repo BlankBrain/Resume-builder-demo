@@ -124,10 +124,13 @@ class ReviewVC: UIViewController {
         let pdf = SimplePDF(pageSize: a4PaperSize)
         pdf.setContentAlignment(.center)
 
-        // add logo image
+        // check if there is image and add logo image
         let logoImage = CurrentResume.shared.image
-        pdf.addImage(logoImage)
-        pdf.addLineSpace(30)
+        if ( logoImage.size.width != 0) {
+            pdf.addImage(logoImage)
+            pdf.addLineSpace(30)
+        }
+        
         pdf.setContentAlignment(.left)
         pdf.addText("Name: \(name)")
         
@@ -195,6 +198,7 @@ class ReviewVC: UIViewController {
                 utility.showAlart(self, title: "Success !", message: " Your Resume is can be found at \(outputURL.path)")
                 
                 
+                
             }catch{
                 print(error)
             }
@@ -204,25 +208,79 @@ class ReviewVC: UIViewController {
     
     func saveResume() {
         
-        let newResume = Resume(context: self.context)
-        print(CurrentResume.shared)
-        newResume.firstName = CurrentResume.shared.firstName
-        newResume.middleName = CurrentResume.shared.middleNAme
-        newResume.lastName = CurrentResume.shared.lastName
-        newResume.mobileNumber = CurrentResume.shared.phone
-        newResume.email = CurrentResume.shared.email
-        newResume.cvAddress = CurrentResume.shared.address
-        newResume.carreerObjective = CurrentResume.shared.objective
-        newResume.totalYearofExp = CurrentResume.shared.totalYear
-        newResume.skills = CurrentResume.shared.skills
+//        let newResume = Resume(context: self.context)
+//        print(CurrentResume.shared)
+//        newResume.firstName = CurrentResume.shared.firstName
+//        newResume.middleName = CurrentResume.shared.middleNAme
+//        newResume.lastName = CurrentResume.shared.lastName
+//        newResume.mobileNumber = CurrentResume.shared.phone
+//        newResume.email = CurrentResume.shared.email
+//        newResume.cvAddress = CurrentResume.shared.address
+//        newResume.carreerObjective = CurrentResume.shared.objective
+//        newResume.totalYearofExp = CurrentResume.shared.totalYear
+//        newResume.skills = CurrentResume.shared.skills
         
         //MARK:- Needs to work further
 //        newResume.addToEducation(NSSet(array: CurrentResume.shared.experience))
 //        newResume.addToEducation(NSSet(array: CurrentResume.shared.Education))
 //        newResume.addToProjectExp(NSSet(array: CurrentResume.shared.projects))
         
+        
+        
+        let ResumeEntity = NSEntityDescription.entity(forEntityName: "Resume", in: self.context)
+        let resume = Resume(entity: ResumeEntity!, insertInto: self.context)
+        resume.firstName = CurrentResume.shared.firstName
+        resume.middleName = CurrentResume.shared.middleNAme
+        resume.lastName = CurrentResume.shared.lastName
+        resume.mobileNumber = CurrentResume.shared.phone
+        resume.email = CurrentResume.shared.email
+        resume.cvAddress = CurrentResume.shared.address
+        resume.carreerObjective = CurrentResume.shared.objective
+        resume.totalYearofExp = CurrentResume.shared.totalYear
+        resume.skills = CurrentResume.shared.skills
+
+
+        let WorkEntity = NSEntityDescription.entity(forEntityName: "Work", in: self.context)
+        let work = Work(entity: WorkEntity!, insertInto: self.context)
+        var Exp = [Work]()
+        for item in CurrentResume.shared.experience{
+            work.companyName = item.companyName
+            work.duration = item.Duration
+            Exp.append( work)
+        }
+         
+        let eduEntity = NSEntityDescription.entity(forEntityName: "Education", in: self.context)
+        let Edu = Education(entity: eduEntity!, insertInto: self.context)
+        var eduExp = [Education]()
+        for item in CurrentResume.shared.Education{
+            Edu.passingYear = item.passingYear
+            Edu.gpa = item.gpa
+            Edu.eduClass = item.eduClass
+            eduExp.append( Edu)
+        }
+        
+        let projectEntity = NSEntityDescription.entity(forEntityName: "Project", in: self.context)
+        let project = Project(entity: projectEntity!, insertInto: self.context)
+        var ProjectExp = [Project]()
+        for item in CurrentResume.shared.projects{
+            project.projectNAme = item.projectName
+            project.tech = item.tech
+            project.role = item.role
+            project.teamSize = item.TeamSize
+            project.summary = item.Summary
+            ProjectExp.append( project)
+        }
+        
         let data = CurrentResume.shared.image.jpegData(compressionQuality: 0.9)
-        newResume.profileImage =  data
+        resume.profileImage =  data
+
+        
+        resume.workExp = NSSet(array: Exp)
+        resume.education = NSSet(array: eduExp)
+        resume.projectExp = NSSet(array: ProjectExp)
+
+        
+
         
         
         
