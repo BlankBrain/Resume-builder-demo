@@ -81,9 +81,11 @@ extension String {
           }
       }
     var isValidPhone: Bool {
-         let regularExpressionForPhone = "^\\d{3}-\\d{3}-\\d{4}$"
-         let testPhone = NSPredicate(format:"SELF MATCHES %@", regularExpressionForPhone)
-         return testPhone.evaluate(with: self)
+        let charcter  = CharacterSet(charactersIn: "+0123456789").inverted
+        let inputString = self.components(separatedBy: charcter).joined(separator: "")
+        return  self == inputString
+
+          
       }
    
 }
