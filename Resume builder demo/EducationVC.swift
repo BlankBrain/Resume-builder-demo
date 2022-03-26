@@ -54,14 +54,18 @@ class EducationVC: UIViewController {
             let textField1 = alert?.textFields![0]
             let textField2 = alert?.textFields![1]
             let textField3 = alert?.textFields![2]
-            
-            
+                        
             var edu = CurrentResume.Edu()
             edu.eduClass = textField1?.text ?? "Apple"
             edu.passingYear = textField2?.text ?? "2018"
             edu.gpa = textField3?.text ?? "4"
             
-            self.eduHistory.append(edu)
+            if(edu.eduClass.isBlank || edu.passingYear.isBlank || edu.gpa.isBlank){
+                utility.showAlart(self, title: "Error !", message: "Please enter your education properly")
+            }else{
+                self.eduHistory.append(edu)
+            }
+            
             
             DispatchQueue.main.async {
                 self.tableview.reloadData()
