@@ -53,8 +53,14 @@ class WorkVC: UIViewController {
             workExp1.companyName = textField1?.text ?? "Apple"
             workExp1.Duration = textField2?.text ?? "10"
             
-            self.workExp.append(workExp1)
-            CurrentResume.shared.experience = self.workExp
+            if(workExp1.companyName.isBlank || workExp1.Duration.isBlank){
+                utility.showAlart(self, title: "Error !", message: "Please enter your work experience properly")
+            }else{
+                self.workExp.append(workExp1)
+                CurrentResume.shared.experience = self.workExp
+            }
+            
+            
             
             DispatchQueue.main.async {
                 self.tableview.reloadData()

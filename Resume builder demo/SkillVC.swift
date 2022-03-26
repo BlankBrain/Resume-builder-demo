@@ -45,14 +45,12 @@ class SkillVC: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0]
             
-            print("Text field: \(textField?.text)")
+            print("Text field: \(textField?.text ?? "")")
             let skill = textField?.text ?? ""
             if(skill.isBlank){
                 utility.showAlart(self, title: "Error !", message: "Please enter your Skill")
             }else{
                 self.skills.append( skill ) }
-            
-            
             
             DispatchQueue.main.async {
                 self.tableForSkill.reloadData()
@@ -88,7 +86,7 @@ extension SkillVC: UITableViewDelegate , UITableViewDataSource {
             if CurrentResume.shared.skills.contains(where: {$0 == self.skills[indexPath.row]}) {
                 CurrentResume.shared.skills.remove(at: indexPath.row)
             } else {
-               //item could not be found
+                //item could not be found
             }
             
             DispatchQueue.main.async {
