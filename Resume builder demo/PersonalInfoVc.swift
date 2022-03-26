@@ -109,17 +109,24 @@ class PersonalInfoVc: UIViewController {
             utility.showAlart(self, title: "Error !", message: "Please enter total year in experience")
         }else{ CurrentResume.shared.totalYear = expInYears.text ?? ""}
         
-        if(careerobjective.text!.isBlank){
-            utility.showAlart(self, title: "Error !", message: "Please enter career objective")
-        }else{ CurrentResume.shared.totalYear = expInYears.text ?? ""}
         
-        CurrentResume.shared.phone =  txtPhone.text ?? ""
-        if(careerobjective.text!.isEmail){
-            CurrentResume.shared.objective = careerobjective.text ?? ""
+        if(txtPhone.text!.isValidPhone){
+            CurrentResume.shared.phone =  txtPhone.text ?? ""
+        }else{
+            utility.showAlart(self, title: "Error !", message: "Please enter valid phone number")
+        }
+        
+        
+        
+        
+        
+        if(txrtemail.text!.isEmail){
+            CurrentResume.shared.email = txrtemail.text ?? ""
         }else{
             utility.showAlart(self, title: "Error !", message: "Please enter valid email address")
         }
         
+        CurrentResume.shared.objective = careerobjective.text ?? ""
         performSegue(withIdentifier: "personalInfoToProfessional", sender: self)
         
         
