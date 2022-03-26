@@ -355,7 +355,6 @@
                         <outlet property="careerobjective" destination="JLh-wh-QBH" id="9Y7-xp-vSz"/>
                         <outlet property="expInYears" destination="1Pw-dS-nIA" id="Lp8-eK-iE5"/>
                         <outlet property="firstName" destination="BCc-4h-5hk" id="1Lg-3h-Ajj"/>
-                        <outlet property="lastNAme" destination="aeu-Bb-K5P" id="Oav-4A-ofU"/>
                         <outlet property="middleNAme" destination="eiM-9w-lHB" id="lHl-p3-tbh"/>
                         <outlet property="middlename" destination="a8v-Bj-9XS" id="WDl-fO-Fop"/>
                         <outlet property="streetName" destination="6wt-GI-vKc" id="j1f-0g-Z1A"/>

@@ -18,6 +18,30 @@ class utility {
                              inViewController.present(alert, animated: true)
     }
    static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    //MARK: validation
+    static func isValidEmailAddress(emailAddressString: String) -> Bool {
+       
+       var returnValue = true
+       let emailRegEx = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
+       
+       do {
+           let regex = try NSRegularExpression(pattern: emailRegEx)
+           let nsString = emailAddressString as NSString
+           let results = regex.matches(in: emailAddressString, range: NSRange(location: 0, length: nsString.length))
+           
+           if results.count == 0
+           {
+               returnValue = false
+           }
+           
+       } catch let error as NSError {
+           print("invalid regex: \(error.localizedDescription)")
+           returnValue = false
+       }
+       
+       return  returnValue
+   }
 
 }
 extension UITextField {
@@ -56,5 +80,26 @@ class myRoundButton: UIButton {
              self.layer.borderColor = borderColor.cgColor
          }
      }
+    
+  
+    
 
+}
+extension String {
+
+    var isBlank: Bool {
+        get {
+            let trimmed = trimmingCharacters(in: CharacterSet.whitespaces)
+            return trimmed.isEmpty
+        }
+    }
+    var isEmail: Bool {
+          do {
+              let regex = try NSRegularExpression(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}", options: .caseInsensitive)
+              return regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.count)) != nil
+          } catch {
+              return false
+          }
+      }
+    
 }

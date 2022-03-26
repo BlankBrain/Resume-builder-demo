@@ -67,7 +67,7 @@ class PersonalInfoVc: UIViewController {
         txtPhone.text = CurrentResume.shared.phone
         firstName.text = CurrentResume.shared.firstName
         middlename.text = CurrentResume.shared.middleNAme
-        lastNAme.text = CurrentResume.shared.lastName
+        Lname.text = CurrentResume.shared.lastName
         txrtemail.text = CurrentResume.shared.email
         expInYears.text = CurrentResume.shared.totalYear
         let address = CurrentResume.shared.address.components(separatedBy: " ")
@@ -84,17 +84,42 @@ class PersonalInfoVc: UIViewController {
     
     @IBAction func nextBtnClicked(_ sender: Any) {
         
+        if(firstName.text!.isBlank){
+            utility.showAlart(self, title: "Error !", message: "Please enter your first name")
+        }else{  CurrentResume.shared.firstName = firstName.text ?? "" }
         
-        CurrentResume.shared.firstName = firstName.text ?? ""
-        CurrentResume.shared.middleNAme = Mname.text ?? ""
-        CurrentResume.shared.lastName = Lname.text ?? ""
+        if(middlename.text!.isBlank){
+            utility.showAlart(self, title: "Error !", message: "Please enter your middle name")
+        }else{  CurrentResume.shared.middleNAme = Mname.text ?? ""}
+        
+        if(Lname.text!.isBlank){
+            utility.showAlart(self, title: "Error !", message: "Please enter your last name")
+        }else{  CurrentResume.shared.lastName = Lname.text ?? ""}
+        
+        
         let address1  = (( streetName.text ?? "") + " " +  (areaName.text ?? "" ) )
         let address2  =   ( " " + (zipCode.text ?? "" ) + (" " + Country.text! ))
-        CurrentResume.shared.address = address1 + address2
-        CurrentResume.shared.totalYear = expInYears.text ?? ""
+        let finalAddress = address1 + address2
+        
+        if(finalAddress.isBlank){
+            utility.showAlart(self, title: "Incomplete address !", message: "Please enter your address properly")
+        }else{   CurrentResume.shared.address = finalAddress}
+        
+        if(expInYears.text!.isBlank){
+            utility.showAlart(self, title: "Error !", message: "Please enter total year in experience")
+        }else{ CurrentResume.shared.totalYear = expInYears.text ?? ""}
+        
+        if(careerobjective.text!.isBlank){
+            utility.showAlart(self, title: "Error !", message: "Please enter career objective")
+        }else{ CurrentResume.shared.totalYear = expInYears.text ?? ""}
+        
         CurrentResume.shared.phone =  txtPhone.text ?? ""
-        CurrentResume.shared.email = txrtemail.text ?? ""
-        CurrentResume.shared.objective = careerobjective.text ?? ""
+        if(careerobjective.text!.isEmail){
+            CurrentResume.shared.objective = careerobjective.text ?? ""
+        }else{
+            utility.showAlart(self, title: "Error !", message: "Please enter valid email address")
+        }
+        
         performSegue(withIdentifier: "personalInfoToProfessional", sender: self)
         
         
